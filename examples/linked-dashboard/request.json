@@ -1,0 +1,43 @@
+{
+  "tool": "d3_create_dashboard",
+  "arguments": {
+    "prompt": "WAN health by site and region: latency, packet loss and incidents",
+    "datasets": [
+      {
+        "data": {
+          "file": "linked/wan-telemetry.csv"
+        },
+        "label": "telemetry"
+      },
+      {
+        "data": {
+          "file": "linked/sites.xlsx"
+        },
+        "label": "sites"
+      },
+      {
+        "data": {
+          "file": "linked/incidents.json"
+        },
+        "label": "incidents",
+        "prompt": "number of incidents by severity"
+      },
+      {
+        "data": {
+          "file": "linked/wan-topology.yaml"
+        },
+        "label": "topology"
+      },
+      {
+        "data": {
+          "file": "linked/regions.geojson"
+        },
+        "label": "regions"
+      }
+    ],
+    "max_charts": 8
+  },
+  "env": {
+    "D3MCP_DATA_DIRS": "<project>/examples/data-files"
+  }
+}

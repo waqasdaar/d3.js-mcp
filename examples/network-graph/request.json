@@ -1,0 +1,151 @@
+{
+  "tool": "d3_visualize",
+  "arguments": {
+    "data": {
+      "nodes": [
+        {
+          "id": "hub-sjc",
+          "group": "hub",
+          "label": "Hub SJC"
+        },
+        {
+          "id": "hub-nyc",
+          "group": "hub",
+          "label": "Hub NYC"
+        },
+        {
+          "id": "hub-lon",
+          "group": "hub",
+          "label": "Hub LON"
+        },
+        {
+          "id": "br-sfo",
+          "group": "branch",
+          "label": "Branch SFO"
+        },
+        {
+          "id": "br-sea",
+          "group": "branch",
+          "label": "Branch SEA"
+        },
+        {
+          "id": "br-bos",
+          "group": "branch",
+          "label": "Branch BOS"
+        },
+        {
+          "id": "br-chi",
+          "group": "branch",
+          "label": "Branch CHI"
+        },
+        {
+          "id": "br-par",
+          "group": "branch",
+          "label": "Branch PAR"
+        },
+        {
+          "id": "br-ber",
+          "group": "branch",
+          "label": "Branch BER"
+        },
+        {
+          "id": "dc-1",
+          "group": "datacenter",
+          "label": "DC 1"
+        },
+        {
+          "id": "dc-2",
+          "group": "datacenter",
+          "label": "DC 2"
+        },
+        {
+          "id": "cloud",
+          "group": "cloud",
+          "label": "Cloud GW"
+        }
+      ],
+      "links": [
+        {
+          "source": "hub-sjc",
+          "target": "hub-nyc",
+          "value": 10
+        },
+        {
+          "source": "hub-nyc",
+          "target": "hub-lon",
+          "value": 8
+        },
+        {
+          "source": "hub-sjc",
+          "target": "hub-lon",
+          "value": 4
+        },
+        {
+          "source": "br-sfo",
+          "target": "hub-sjc",
+          "value": 3
+        },
+        {
+          "source": "br-sea",
+          "target": "hub-sjc",
+          "value": 2
+        },
+        {
+          "source": "br-bos",
+          "target": "hub-nyc",
+          "value": 3
+        },
+        {
+          "source": "br-chi",
+          "target": "hub-nyc",
+          "value": 2
+        },
+        {
+          "source": "br-par",
+          "target": "hub-lon",
+          "value": 3
+        },
+        {
+          "source": "br-ber",
+          "target": "hub-lon",
+          "value": 2
+        },
+        {
+          "source": "dc-1",
+          "target": "hub-sjc",
+          "value": 9
+        },
+        {
+          "source": "dc-2",
+          "target": "hub-nyc",
+          "value": 9
+        },
+        {
+          "source": "cloud",
+          "target": "hub-sjc",
+          "value": 6
+        },
+        {
+          "source": "cloud",
+          "target": "hub-lon",
+          "value": 5
+        }
+      ]
+    },
+    "prompt": "Force-directed network colored by group, sized by degree, with search, zoom and drag",
+    "visualization_type": "force",
+    "options": {
+      "interaction": {
+        "zoom": true,
+        "search": true,
+        "drag": true
+      },
+      "options": {
+        "nodeSizeBy": "degree",
+        "showLabels": true,
+        "seed": 7
+      }
+    },
+    "output_formats": ["html", "svg", "png"]
+  }
+}

@@ -1,0 +1,105 @@
+nodes:
+  - id: internet
+    label: Internet
+    type: internet
+    tier: wan
+    site: WAN
+  - id: fw-1
+    label: FW-1
+    type: firewall
+    tier: edge
+    site: HQ
+  - id: fw-2
+    label: FW-2
+    type: fw
+    tier: edge
+    site: HQ
+  - id: core-1
+    label: Core-1
+    type: router
+    tier: core
+    site: HQ
+  - id: core-2
+    label: Core-2
+    type: router
+    tier: core
+    site: HQ
+  - id: dist-1
+    label: Dist-1
+    type: l3-switch
+    tier: distribution
+    site: HQ
+  - id: dist-2
+    label: Dist-2
+    type: l3-switch
+    tier: distribution
+    site: HQ
+  - id: acc-1
+    label: Acc-1
+    type: switch
+    tier: access
+    site: HQ
+  - id: acc-2
+    label: Acc-2
+    type: switch
+    tier: access
+    site: HQ
+  - id: acc-3
+    label: Acc-3
+    type: switch
+    tier: access
+    site: HQ
+  - id: ap-1
+    label: AP-1
+    type: ap
+    tier: endpoint
+    site: HQ
+  - id: srv-1
+    label: App server
+    type: server
+    tier: endpoint
+    site: DC
+  - id: db-1
+    label: DB
+    type: database
+    tier: endpoint
+    site: DC
+  - id: pc-1
+    label: PC
+    type: pc
+    tier: endpoint
+    site: HQ
+links:
+  - source: internet
+    target: fw-1
+  - source: internet
+    target: fw-2
+  - source: fw-1
+    target: core-1
+  - source: fw-2
+    target: core-2
+  - source: core-1
+    target: core-2
+    value: 4
+  - source: core-1
+    target: dist-1
+  - source: core-2
+    target: dist-2
+  - source: core-1
+    target: dist-2
+  - source: core-2
+    target: dist-1
+  - source: dist-1
+    target: acc-1
+  - source: dist-1
+    target: acc-2
+  - source: dist-2
+    target: acc-3
+  - source: acc-1
+    target: ap-1
+  - source: acc-2
+    target: pc-1
+  - source: acc-3
+    target: srv-1
+  - source: acc-3
+    target: db-1

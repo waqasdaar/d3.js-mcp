@@ -1,0 +1,160 @@
+{
+  "tool": "d3_compose_visualizations",
+  "arguments": {
+    "title": "One dashboard, every input format",
+    "columns": 2,
+    "charts": [
+      {
+        "data": {
+          "file": "workbook.xlsx",
+          "sheet": "Totals"
+        },
+        "visualization_type": "bar",
+        "title": "Excel (.xlsx) · Totals sheet",
+        "options": {
+          "encoding": {
+            "x": {
+              "field": "region"
+            },
+            "y": {
+              "field": "total"
+            }
+          }
+        }
+      },
+      {
+        "data": {
+          "file": "workbook.xlsx",
+          "sheet": "KPIs"
+        },
+        "visualization_type": "line",
+        "title": "Excel (.xlsx) · KPIs sheet (dates)",
+        "options": {
+          "encoding": {
+            "x": {
+              "field": "date"
+            },
+            "y": {
+              "field": "latency_ms"
+            },
+            "series": {
+              "field": "site"
+            }
+          },
+          "options": {
+            "showPoints": true
+          }
+        }
+      },
+      {
+        "data": {
+          "file": "workbook.ods"
+        },
+        "visualization_type": "grouped-bar",
+        "title": "OpenDocument (.ods)",
+        "options": {
+          "encoding": {
+            "x": {
+              "field": "region"
+            },
+            "y": {
+              "field": "revenue"
+            },
+            "series": {
+              "field": "product"
+            }
+          }
+        }
+      },
+      {
+        "data": {
+          "file": "sales.yaml"
+        },
+        "visualization_type": "donut",
+        "title": "YAML",
+        "options": {
+          "encoding": {
+            "color": {
+              "field": "product"
+            },
+            "value": {
+              "field": "units"
+            }
+          }
+        }
+      },
+      {
+        "data": {
+          "file": "sales.jsonl"
+        },
+        "visualization_type": "scatter",
+        "title": "JSON Lines",
+        "options": {
+          "encoding": {
+            "x": {
+              "field": "units"
+            },
+            "y": {
+              "field": "revenue"
+            },
+            "color": {
+              "field": "region"
+            }
+          }
+        }
+      },
+      {
+        "data": {
+          "file": "sales-semicolon.csv"
+        },
+        "visualization_type": "bar",
+        "title": "CSV with ; and decimal commas",
+        "options": {
+          "encoding": {
+            "x": {
+              "field": "region"
+            },
+            "y": {
+              "field": "revenue_eur"
+            }
+          }
+        }
+      },
+      {
+        "data": {
+          "file": "regions.topojson"
+        },
+        "visualization_type": "geo",
+        "title": "TopoJSON",
+        "options": {
+          "encoding": {
+            "color": {
+              "field": "value"
+            }
+          }
+        }
+      },
+      {
+        "data": {
+          "file": "topology.yaml"
+        },
+        "visualization_type": "force",
+        "title": "YAML graph with icons",
+        "options": {
+          "encoding": {
+            "color": {
+              "field": "tier"
+            }
+          },
+          "options": {
+            "seed": 3,
+            "nodeSizeBy": "constant"
+          }
+        }
+      }
+    ]
+  },
+  "env": {
+    "D3MCP_DATA_DIRS": "<project>/examples/data-files"
+  }
+}

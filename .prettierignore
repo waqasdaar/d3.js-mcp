@@ -1,0 +1,13 @@
+dist
+dist-check
+node_modules
+artifacts
+reports
+examples/**/output
+workbench/dist
+test-results
+playwright-report
+package-lock.json
+data/d3-api-inventory.json
+data/d3-api.md
+schemas/*.json

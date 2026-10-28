@@ -1,0 +1,13 @@
+{
+  "tool": "d3_create_dashboard",
+  "arguments": {
+    "data": {
+      "file": "workbook.xlsx"
+    },
+    "split_sheets": true,
+    "prompt": "Workbook overview"
+  },
+  "env": {
+    "D3MCP_DATA_DIRS": "<project>/examples/data-files"
+  }
+}

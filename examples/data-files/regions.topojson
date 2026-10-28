@@ -1,0 +1,30 @@
+{
+  "type": "Topology",
+  "arcs": [
+    [
+      [0, 40],
+      [0, 45]
+    ],
+    [
+      [0, 45],
+      [-5, 45],
+      [-5, 40],
+      [0, 40]
+    ],
+    [
+      [0, 40],
+      [5, 40],
+      [5, 45],
+      [0, 45]
+    ]
+  ],
+  "objects": {
+    "regions": {
+      "type": "GeometryCollection",
+      "geometries": [
+        { "type": "Polygon", "arcs": [[0, 1]], "properties": { "name": "West", "value": 30 } },
+        { "type": "Polygon", "arcs": [[2, -1]], "properties": { "name": "East", "value": 70 } }
+      ]
+    }
+  }
+}

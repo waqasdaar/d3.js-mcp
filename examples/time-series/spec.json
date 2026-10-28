@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "id": "viz_9268ccadb7d4",
+  "type": "line",
+  "renderer": "svg",
+  "title": "How does latency_ms change over time for each site?",
+  "question": "Show latency over time for each site with an SLA line at 150 ms",
+  "data": {
+    "datasetId": "ds_2958e8d0641b"
+  },
+  "encoding": {
+    "x": {
+      "field": "timestamp"
+    },
+    "y": {
+      "field": "latency_ms"
+    },
+    "series": {
+      "field": "site"
+    }
+  },
+  "transforms": [],
+  "layout": {
+    "width": 800,
+    "height": 500,
+    "margin": {
+      "top": 56,
+      "right": 24,
+      "bottom": 56,
+      "left": 64
+    },
+    "responsive": true,
+    "pixelRatio": 2
+  },
+  "axes": {},
+  "scales": {},
+  "legend": {
+    "show": true,
+    "position": "right"
+  },
+  "annotations": [
+    {
+      "type": "rule",
+      "axis": "y",
+      "value": 150,
+      "label": "SLA 150 ms"
+    }
+  ],
+  "interaction": {
+    "tooltip": true,
+    "zoom": false,
+    "brush": true,
+    "drag": false,
+    "search": false
+  },
+  "accessibility": {
+    "keyboard": true,
+    "reducedMotion": true
+  },
+  "theme": "light",
+  "options": {}
+}

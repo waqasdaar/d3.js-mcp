@@ -1,0 +1,201 @@
+{
+  "source": "itsm-export",
+  "incidents": [
+    {
+      "ticket": "INC-4100",
+      "site": "dxb",
+      "severity": "P2",
+      "opened": "2026-10-09",
+      "minutes_to_resolve": 165
+    },
+    {
+      "ticket": "INC-4101",
+      "site": "dxb",
+      "severity": "P3",
+      "opened": "2026-10-09",
+      "minutes_to_resolve": 210
+    },
+    {
+      "ticket": "INC-4102",
+      "site": "sjc",
+      "severity": "P3",
+      "opened": "2026-10-04",
+      "minutes_to_resolve": 354
+    },
+    {
+      "ticket": "INC-4103",
+      "site": "nyc",
+      "severity": "P2",
+      "opened": "2026-10-09",
+      "minutes_to_resolve": 148
+    },
+    {
+      "ticket": "INC-4104",
+      "site": "sin",
+      "severity": "P1",
+      "opened": "2026-10-13",
+      "minutes_to_resolve": 29
+    },
+    {
+      "ticket": "INC-4105",
+      "site": "dxb",
+      "severity": "P2",
+      "opened": "2026-10-12",
+      "minutes_to_resolve": 151
+    },
+    {
+      "ticket": "INC-4106",
+      "site": "sin",
+      "severity": "P1",
+      "opened": "2026-10-13",
+      "minutes_to_resolve": 50
+    },
+    {
+      "ticket": "INC-4107",
+      "site": "sin",
+      "severity": "P2",
+      "opened": "2026-10-13",
+      "minutes_to_resolve": 167
+    },
+    {
+      "ticket": "INC-4108",
+      "site": "dxb",
+      "severity": "P3",
+      "opened": "2026-10-13",
+      "minutes_to_resolve": 237
+    },
+    {
+      "ticket": "INC-4109",
+      "site": "dxb",
+      "severity": "P1",
+      "opened": "2026-10-02",
+      "minutes_to_resolve": 70
+    },
+    {
+      "ticket": "INC-4110",
+      "site": "dxb",
+      "severity": "P1",
+      "opened": "2026-10-02",
+      "minutes_to_resolve": 39
+    },
+    {
+      "ticket": "INC-4111",
+      "site": "syd",
+      "severity": "P3",
+      "opened": "2026-10-14",
+      "minutes_to_resolve": 263
+    },
+    {
+      "ticket": "INC-4112",
+      "site": "dal",
+      "severity": "P1",
+      "opened": "2026-10-07",
+      "minutes_to_resolve": 52
+    },
+    {
+      "ticket": "INC-4113",
+      "site": "dal",
+      "severity": "P1",
+      "opened": "2026-10-07",
+      "minutes_to_resolve": 37
+    },
+    {
+      "ticket": "INC-4114",
+      "site": "sjc",
+      "severity": "P1",
+      "opened": "2026-10-02",
+      "minutes_to_resolve": 55
+    },
+    {
+      "ticket": "INC-4115",
+      "site": "dxb",
+      "severity": "P3",
+      "opened": "2026-10-11",
+      "minutes_to_resolve": 333
+    },
+    {
+      "ticket": "INC-4116",
+      "site": "dxb",
+      "severity": "P2",
+      "opened": "2026-10-09",
+      "minutes_to_resolve": 188
+    },
+    {
+      "ticket": "INC-4117",
+      "site": "sin",
+      "severity": "P3",
+      "opened": "2026-10-10",
+      "minutes_to_resolve": 361
+    },
+    {
+      "ticket": "INC-4118",
+      "site": "sin",
+      "severity": "P1",
+      "opened": "2026-10-01",
+      "minutes_to_resolve": 60
+    },
+    {
+      "ticket": "INC-4119",
+      "site": "dxb",
+      "severity": "P2",
+      "opened": "2026-10-08",
+      "minutes_to_resolve": 118
+    },
+    {
+      "ticket": "INC-4120",
+      "site": "dxb",
+      "severity": "P1",
+      "opened": "2026-10-01",
+      "minutes_to_resolve": 31
+    },
+    {
+      "ticket": "INC-4121",
+      "site": "nyc",
+      "severity": "P2",
+      "opened": "2026-10-03",
+      "minutes_to_resolve": 149
+    },
+    {
+      "ticket": "INC-4122",
+      "site": "dal",
+      "severity": "P1",
+      "opened": "2026-10-01",
+      "minutes_to_resolve": 65
+    },
+    {
+      "ticket": "INC-4123",
+      "site": "sin",
+      "severity": "P1",
+      "opened": "2026-10-11",
+      "minutes_to_resolve": 41
+    },
+    {
+      "ticket": "INC-4124",
+      "site": "lon",
+      "severity": "P3",
+      "opened": "2026-10-12",
+      "minutes_to_resolve": 183
+    },
+    {
+      "ticket": "INC-4125",
+      "site": "dxb",
+      "severity": "P1",
+      "opened": "2026-10-09",
+      "minutes_to_resolve": 46
+    },
+    {
+      "ticket": "INC-4126",
+      "site": "sjc",
+      "severity": "P2",
+      "opened": "2026-10-11",
+      "minutes_to_resolve": 162
+    },
+    {
+      "ticket": "INC-4127",
+      "site": "dal",
+      "severity": "P3",
+      "opened": "2026-10-12",
+      "minutes_to_resolve": 275
+    }
+  ]
+}

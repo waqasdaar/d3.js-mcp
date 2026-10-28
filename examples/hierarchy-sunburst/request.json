@@ -1,0 +1,71 @@
+{
+  "tool": "d3_visualize",
+  "arguments": {
+    "data": {
+      "format": "hierarchy",
+      "root": {
+        "name": "Network",
+        "children": [
+          {
+            "name": "Americas",
+            "children": [
+              {
+                "name": "SJC",
+                "value": 420
+              },
+              {
+                "name": "NYC",
+                "value": 380
+              },
+              {
+                "name": "SFO",
+                "value": 120
+              },
+              {
+                "name": "CHI",
+                "value": 90
+              }
+            ]
+          },
+          {
+            "name": "EMEA",
+            "children": [
+              {
+                "name": "LON",
+                "value": 300
+              },
+              {
+                "name": "PAR",
+                "value": 110
+              },
+              {
+                "name": "BER",
+                "value": 85
+              }
+            ]
+          },
+          {
+            "name": "APAC",
+            "children": [
+              {
+                "name": "TYO",
+                "value": 260
+              },
+              {
+                "name": "SYD",
+                "value": 140
+              },
+              {
+                "name": "SIN",
+                "value": 160
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "prompt": "Sunburst of site capacity by region",
+    "visualization_type": "sunburst",
+    "output_formats": ["html", "svg", "png"]
+  }
+}

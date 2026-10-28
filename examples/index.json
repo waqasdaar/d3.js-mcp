@@ -1,0 +1,304 @@
+{
+  "generatedAt": "2026-10-28T15:47:22.261Z",
+  "examples": [
+    {
+      "name": "bar-chart",
+      "type": "bar",
+      "marks": 4,
+      "files": [
+        "examples/bar-chart/chart.svg",
+        "examples/bar-chart/chart.html",
+        "examples/bar-chart/spec.json",
+        "examples/bar-chart/chart.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "Highest sum of revenue: East (380, 35.1% of total).",
+        "Lowest: West (153). 4 categories compared."
+      ]
+    },
+    {
+      "name": "time-series",
+      "type": "line",
+      "marks": 3,
+      "files": [
+        "examples/time-series/chart.svg",
+        "examples/time-series/chart.html",
+        "examples/time-series/spec.json",
+        "examples/time-series/chart.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "SJC: latency_ms went from 21.2 to 18.2 (−14.2%) between 2026-10-01 and 2026-10-02; peak 31.2 at 2026-10-01T08:00:00Z.",
+        "NYC: latency_ms went from 59.6 to 51.3 (−13.9%) between 2026-10-01 and 2026-10-02; peak 66.9 at 2026-10-02T07:00:00Z.",
+        "LON: latency_ms went from 91.8 to 84.8 (−7.6%) between 2026-10-01 and 2026-10-02; peak 222.4 at 2026-10-02T06:00:00Z."
+      ]
+    },
+    {
+      "name": "network-graph",
+      "type": "force",
+      "marks": 12,
+      "files": [
+        "examples/network-graph/chart.svg",
+        "examples/network-graph/chart.html",
+        "examples/network-graph/spec.json",
+        "examples/network-graph/chart.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "12 nodes and 13 links in 1 connected component(s).",
+        "Highest-degree nodes: hub-sjc (6), hub-nyc (5), hub-lon (5)."
+      ]
+    },
+    {
+      "name": "topology-icons",
+      "type": "force",
+      "marks": 14,
+      "files": [
+        "examples/topology-icons/chart.svg",
+        "examples/topology-icons/chart.html",
+        "examples/topology-icons/spec.json",
+        "examples/topology-icons/chart.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "14 nodes and 16 links in 1 connected component(s).",
+        "Highest-degree nodes: core-1 (4), core-2 (4), dist-1 (4)."
+      ]
+    },
+    {
+      "name": "topology-custom-icons",
+      "type": "force",
+      "marks": 14,
+      "files": [
+        "examples/topology-custom-icons/chart.svg",
+        "examples/topology-custom-icons/chart.html",
+        "examples/topology-custom-icons/spec.json",
+        "examples/topology-custom-icons/chart.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "14 nodes and 16 links in 1 connected component(s).",
+        "Highest-degree nodes: core-1 (4), core-2 (4), dist-1 (4)."
+      ]
+    },
+    {
+      "name": "hierarchy",
+      "type": "treemap",
+      "marks": 10,
+      "files": [
+        "examples/hierarchy/chart.svg",
+        "examples/hierarchy/chart.html",
+        "examples/hierarchy/spec.json",
+        "examples/hierarchy/chart.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "14 nodes; 10 leaves; maximum depth 2.",
+        "Largest top-level branch: Americas (48.9% of total value 2,065)."
+      ]
+    },
+    {
+      "name": "hierarchy-sunburst",
+      "type": "sunburst",
+      "marks": 13,
+      "files": [
+        "examples/hierarchy-sunburst/chart.svg",
+        "examples/hierarchy-sunburst/chart.html",
+        "examples/hierarchy-sunburst/spec.json",
+        "examples/hierarchy-sunburst/chart.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "14 nodes; 10 leaves; maximum depth 2.",
+        "Largest top-level branch: Americas (48.9% of total value 2,065)."
+      ]
+    },
+    {
+      "name": "geographic-map",
+      "type": "geo",
+      "marks": 6,
+      "files": [
+        "examples/geographic-map/chart.svg",
+        "examples/geographic-map/chart.html",
+        "examples/geographic-map/spec.json",
+        "examples/geographic-map/chart.png"
+      ],
+      "exportErrors": {},
+      "findings": ["Highest value: Foxtrot (85); lowest: Alpha (10)."]
+    },
+    {
+      "name": "geographic-points",
+      "type": "geo",
+      "marks": 6,
+      "files": [
+        "examples/geographic-points/chart.svg",
+        "examples/geographic-points/chart.html",
+        "examples/geographic-points/spec.json",
+        "examples/geographic-points/chart.png"
+      ],
+      "exportErrors": {},
+      "findings": []
+    },
+    {
+      "name": "dashboard",
+      "type": "dashboard",
+      "marks": 21,
+      "files": [
+        "examples/dashboard/dashboard.html",
+        "examples/dashboard/chart-1.svg",
+        "examples/dashboard/dashboard.json",
+        "examples/dashboard/dashboard.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "How does latency_ms change over time for each site?: SJC: latency_ms went from 21.2 to 18.2 (−14.2%) between 2026-10-01 and 2026-10-02; peak 31.2 at 2026-10-01T08:00:00Z.",
+        "How does latency_ms change over time for each site?: NYC: latency_ms went from 59.6 to 51.3 (−13.9%) between 2026-10-01 and 2026-10-02; peak 66.9 at 2026-10-02T07:00:00Z.",
+        "How does latency_ms change over time for each site?: LON: latency_ms went from 91.8 to 84.8 (−7.6%) between 2026-10-01 and 2026-10-02; peak 222.4 at 2026-10-02T06:00:00Z.",
+        "How does packet_loss_pct change over time for each site?: SJC: packet_loss_pct went from 0.47 to 0.23 (−51.1%) between 2026-10-01 and 2026-10-02; peak 0.49 at 2026-10-01T01:00:00Z.",
+        "How does packet_loss_pct change over time for each site?: NYC: packet_loss_pct went from 0.21 to 0.22 (4.8%) between 2026-10-01 and 2026-10-02; peak 0.5 at 2026-10-01T05:00:00Z.",
+        "How does packet_loss_pct change over time for each site?: LON: packet_loss_pct went from 0.22 to 0.23 (4.5%) between 2026-10-01 and 2026-10-02; peak 2.94 at 2026-10-02T07:00:00Z.",
+        "How does throughput_mbps change over time for each site?: SJC: throughput_mbps went from 424 to 406 (−4.2%) between 2026-10-01 and 2026-10-02; peak 439 at 2026-10-01T14:00:00Z.",
+        "How does throughput_mbps change over time for each site?: NYC: throughput_mbps went from 584 to 552 (−5.5%) between 2026-10-01 and 2026-10-02; peak 588 at 2026-10-02T21:00:00Z.",
+        "How does throughput_mbps change over time for each site?: LON: throughput_mbps went from 703 to 736 (4.7%) between 2026-10-01 and 2026-10-02; peak 740 at 2026-10-01T15:00:00Z.",
+        "How are entities connected and which are central?: 12 nodes and 13 links in 1 connected component(s).",
+        "How are entities connected and which are central?: Highest-degree nodes: hub-sjc (6), hub-nyc (5), hub-lon (5)."
+      ]
+    },
+    {
+      "name": "dashboard-from-files",
+      "type": "dashboard",
+      "marks": 45,
+      "files": [
+        "examples/dashboard-from-files/dashboard.html",
+        "examples/dashboard-from-files/chart-1.svg",
+        "examples/dashboard-from-files/dashboard.json",
+        "examples/dashboard-from-files/dashboard.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "Excel (.xlsx) · Totals sheet: Highest sum of total: East (380, 53.5% of total).",
+        "Excel (.xlsx) · Totals sheet: Lowest: North (330). 2 categories compared.",
+        "Excel (.xlsx) · KPIs sheet (dates): SJC: latency_ms went from 21.5 to 23.1 (7.4%) between 2026-10-01 and 2026-10-02; peak 23.1 at 2026-10-02T00:00:00Z.",
+        "OpenDocument (.ods): Highest sum of revenue: East (380, 35.1% of total).",
+        "OpenDocument (.ods): Lowest: West (153). 4 categories compared.",
+        "YAML: Highest sum of units: Switch (203, 52.2% of total).",
+        "YAML: Lowest: Router (186). 2 categories compared.",
+        "JSON Lines: Pearson correlation between units and revenue: r = 0.601 (n = 12). Correlation does not imply causation.",
+        "CSV with ; and decimal commas: Highest sum of revenue_eur: East (2,010, 47.6% of total).",
+        "CSV with ; and decimal commas: Lowest: South (980.25). 3 categories compared.",
+        "TopoJSON: Highest value: East (70); lowest: West (30).",
+        "YAML graph with icons: 14 nodes and 16 links in 1 connected component(s).",
+        "YAML graph with icons: Highest-degree nodes: core-1 (4), core-2 (4), dist-1 (4)."
+      ]
+    },
+    {
+      "name": "auto-dashboard",
+      "type": "dashboard",
+      "marks": 159,
+      "files": [
+        "examples/auto-dashboard/dashboard.html",
+        "examples/auto-dashboard/chart-1.svg",
+        "examples/auto-dashboard/dashboard.json",
+        "examples/auto-dashboard/dashboard.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "How does latency_ms change over time for each site?: SJC: latency_ms went from 21.2 to 18.2 (−14.2%) between 2026-10-01 and 2026-10-02; peak 31.2 at 2026-10-01T08:00:00Z.",
+        "How does latency_ms change over time for each site?: NYC: latency_ms went from 59.6 to 51.3 (−13.9%) between 2026-10-01 and 2026-10-02; peak 66.9 at 2026-10-02T07:00:00Z.",
+        "How does latency_ms change over time for each site?: LON: latency_ms went from 91.8 to 84.8 (−7.6%) between 2026-10-01 and 2026-10-02; peak 222.4 at 2026-10-02T06:00:00Z.",
+        "How does packet_loss_pct change over time for each site?: SJC: packet_loss_pct went from 0.47 to 0.23 (−51.1%) between 2026-10-01 and 2026-10-02; peak 0.49 at 2026-10-01T01:00:00Z.",
+        "How does packet_loss_pct change over time for each site?: NYC: packet_loss_pct went from 0.21 to 0.22 (4.8%) between 2026-10-01 and 2026-10-02; peak 0.5 at 2026-10-01T05:00:00Z.",
+        "How does packet_loss_pct change over time for each site?: LON: packet_loss_pct went from 0.22 to 0.23 (4.5%) between 2026-10-01 and 2026-10-02; peak 2.94 at 2026-10-02T07:00:00Z.",
+        "How does throughput_mbps change over time for each site?: SJC: throughput_mbps went from 424 to 406 (−4.2%) between 2026-10-01 and 2026-10-02; peak 439 at 2026-10-01T14:00:00Z.",
+        "How does throughput_mbps change over time for each site?: NYC: throughput_mbps went from 584 to 552 (−5.5%) between 2026-10-01 and 2026-10-02; peak 588 at 2026-10-02T21:00:00Z.",
+        "How does throughput_mbps change over time for each site?: LON: throughput_mbps went from 703 to 736 (4.7%) between 2026-10-01 and 2026-10-02; peak 740 at 2026-10-01T15:00:00Z.",
+        "How does latency_ms compare across site?: Highest mean of latency_ms: LON (102.99).",
+        "How does latency_ms compare across site?: Lowest: SJC (22.596). 3 categories compared.",
+        "How does packet_loss_pct compare across site?: Highest mean of packet_loss_pct: LON (0.553).",
+        "How does packet_loss_pct compare across site?: Lowest: SJC (0.341). 3 categories compared.",
+        "Is packet_loss_pct related to latency_ms?: Pearson correlation between latency_ms and packet_loss_pct: r = 0.679 (n = 144). Correlation does not imply causation."
+      ],
+      "charts": ["data: line", "data: line", "data: line", "data: bar", "data: bar", "data: scatter"]
+    },
+    {
+      "name": "auto-dashboard-excel",
+      "type": "dashboard",
+      "marks": 26,
+      "files": [
+        "examples/auto-dashboard-excel/dashboard.html",
+        "examples/auto-dashboard-excel/chart-1.svg",
+        "examples/auto-dashboard-excel/dashboard.json",
+        "examples/auto-dashboard-excel/dashboard.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "Sales · How does revenue compare across region?: Highest sum of revenue: East (380, 35.1% of total).",
+        "Sales · How does revenue compare across region?: Lowest: West (153). 4 categories compared.",
+        "Sales · How does units compare across region?: Highest sum of units: East (121, 31.1% of total).",
+        "Sales · How does units compare across region?: Lowest: West (71). 4 categories compared.",
+        "Sales · Is units related to revenue?: Pearson correlation between revenue and units: r = 0.601 (n = 12). Correlation does not imply causation.",
+        "KPIs · How does latency_ms compare across site?: Highest mean of latency_ms: NYC (48).",
+        "KPIs · How does latency_ms compare across site?: Lowest: SJC (22.3). 2 categories compared.",
+        "KPIs · How does loss_pct compare across site?: Highest mean of loss_pct: NYC (0.9).",
+        "KPIs · How does loss_pct compare across site?: Lowest: SJC (0.25). 2 categories compared.",
+        "Totals · How does q1 compare across region?: Highest sum of q1: East (220, 52.4% of total).",
+        "Totals · How does q1 compare across region?: Lowest: North (200). 2 categories compared."
+      ],
+      "charts": ["Sales: bar", "Sales: bar", "Sales: scatter", "KPIs: bar", "KPIs: bar", "Totals: bar"]
+    },
+    {
+      "name": "linked-dashboard",
+      "type": "dashboard",
+      "marks": 43,
+      "files": [
+        "examples/linked-dashboard/dashboard.html",
+        "examples/linked-dashboard/chart-1.svg",
+        "examples/linked-dashboard/dashboard.json",
+        "examples/linked-dashboard/dashboard.png"
+      ],
+      "exportErrors": {},
+      "findings": [
+        "telemetry · How does latency_ms change over time for each site?: SJC: latency_ms went from 18 to 25 (38.9%) between 2026-10-01 and 2026-10-14; peak 25.5 at 2026-10-04T00:00:00Z.",
+        "telemetry · How does latency_ms change over time for each site?: DAL: latency_ms went from 33.7 to 39.4 (16.9%) between 2026-10-01 and 2026-10-14; peak 39.6 at 2026-10-07T00:00:00Z.",
+        "telemetry · How does latency_ms change over time for each site?: NYC: latency_ms went from 43.6 to 44.2 (1.4%) between 2026-10-01 and 2026-10-14; peak 49 at 2026-10-11T00:00:00Z.",
+        "telemetry · How does latency_ms change over time for each site?: LON: latency_ms went from 78.3 to 81.2 (3.7%) between 2026-10-01 and 2026-10-14; peak 81.6 at 2026-10-08T00:00:00Z.",
+        "telemetry · How does latency_ms change over time for each site?: FRA: latency_ms went from 88.5 to 89.6 (1.2%) between 2026-10-01 and 2026-10-14; peak 89.7 at 2026-10-09T00:00:00Z.",
+        "telemetry · How does latency_ms change over time for each site?: DXB: latency_ms went from 123.7 to 118.9 (−3.9%) between 2026-10-01 and 2026-10-14; peak 185.4 at 2026-10-11T00:00:00Z.",
+        "telemetry · How does latency_ms change over time for each site?: SIN: latency_ms went from 141.5 to 142.5 (0.7%) between 2026-10-01 and 2026-10-14; peak 142.9 at 2026-10-03T00:00:00Z.",
+        "telemetry · How does latency_ms change over time for each site?: SYD: latency_ms went from 158.5 to 153 (−3.5%) between 2026-10-01 and 2026-10-14; peak 158.6 at 2026-10-13T00:00:00Z.",
+        "sites · How does circuit_mbps compare across site_code?: Highest sum of circuit_mbps: SJC (1,000, 20.4% of total).",
+        "sites · How does circuit_mbps compare across site_code?: Lowest: SYD (200). 8 categories compared.",
+        "incidents · How many records are there per site?: Highest count of site: dxb (11).",
+        "incidents · How many records are there per site?: Lowest: lon (1). 7 categories compared.",
+        "topology · How are entities connected and which are central?: 8 nodes and 8 links in 1 connected component(s).",
+        "topology · How are entities connected and which are central?: Highest-degree nodes: SJC (4), LON (4), SIN (3).",
+        "regions · How does avg_latency_ms vary geographically?: Highest avg_latency_ms: APAC (147.79); lowest: Americas (34.34).",
+        "telemetry by region · How does latency_ms compare across region?: Highest mean of latency_ms: APAC (147.786).",
+        "telemetry by region · How does latency_ms compare across region?: Lowest: Americas (34.336). 3 categories compared.",
+        "telemetry by region · How does packet_loss_pct compare across region?: Highest mean of packet_loss_pct: APAC (0.598).",
+        "telemetry by region · How does packet_loss_pct compare across region?: Lowest: Americas (0.33). 3 categories compared.",
+        "incidents by region · How does minutes_to_resolve compare across region?: Highest mean of minutes_to_resolve: EMEA (147.583).",
+        "incidents by region · How does minutes_to_resolve compare across region?: Lowest: APAC (138.714). 3 categories compared."
+      ],
+      "charts": [
+        "telemetry: line",
+        "sites: bar",
+        "incidents: bar",
+        "topology: force",
+        "regions: geo",
+        "telemetry by region: bar",
+        "telemetry by region: bar",
+        "incidents by region: bar"
+      ],
+      "links": [
+        "telemetry.site = sites.site_code",
+        "telemetry.site = topology.id",
+        "sites.site_code = incidents.site",
+        "sites.site_code = topology.id",
+        "sites.region = regions.name",
+        "incidents.site = topology.id"
+      ]
+    }
+  ]
+}

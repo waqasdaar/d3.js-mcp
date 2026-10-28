@@ -1,0 +1,4 @@
+{
+  "tool": "d3_compose_visualizations",
+  "note": "Generated through the service API; see tests/integration/mcp.test.ts for the equivalent MCP call."
+}

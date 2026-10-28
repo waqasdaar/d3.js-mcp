@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0",
+  "id": "viz_b0757f9ddde1",
+  "type": "force",
+  "renderer": "svg",
+  "title": "How are entities connected and which are central?",
+  "question": "Topology using custom icons: a path icon for Kubernetes and an SVG icon for the NIC",
+  "data": {
+    "datasetId": "ds_2a3898ee013b"
+  },
+  "encoding": {
+    "color": {
+      "field": "site"
+    }
+  },
+  "transforms": [],
+  "layout": {
+    "width": 800,
+    "height": 600,
+    "margin": {
+      "top": 56,
+      "right": 24,
+      "bottom": 56,
+      "left": 64
+    },
+    "responsive": true,
+    "pixelRatio": 2
+  },
+  "axes": {},
+  "scales": {},
+  "legend": {
+    "show": true,
+    "position": "right"
+  },
+  "annotations": [],
+  "interaction": {
+    "tooltip": true,
+    "zoom": false,
+    "brush": false,
+    "drag": false,
+    "search": false
+  },
+  "accessibility": {
+    "keyboard": true,
+    "reducedMotion": true
+  },
+  "theme": "light",
+  "options": {
+    "nodeSizeBy": "constant",
+    "icons": {
+      "k8s": {
+        "viewBox": [0, 0, 100, 100],
+        "paths": [
+          {
+            "d": "M50 5L90 27v46L50 95 10 73V27z",
+            "fill": "#326ce5"
+          },
+          {
+            "d": "M50 30a20 20 0 1 0 0 40a20 20 0 1 0 0-40z",
+            "fill": "none",
+            "stroke": "white",
+            "strokeWidth": 8
+          }
+        ]
+      },
+      "nic": {
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><circle cx=\"7\" cy=\"12\" r=\"2\"/><g transform=\"translate(1 0)\"><polyline points=\"12 10 15 12 12 14\"/><line x1=\"16\" y1=\"12\" x2=\"19\" y2=\"12\"/></g></svg>"
+      }
+    },
+    "iconStyle": "plain",
+    "seed": 3
+  }
+}

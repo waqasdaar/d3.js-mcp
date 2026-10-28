@@ -1,0 +1,479 @@
+{
+  "title": "WAN health by site and region: latency, packet loss and incidents",
+  "kpis": [
+    {
+      "label": "telemetry · records",
+      "value": "112"
+    },
+    {
+      "label": "telemetry · avg latency_ms",
+      "value": "87.27",
+      "detail": "min 18 · max 185.4"
+    },
+    {
+      "label": "sites · records",
+      "value": "8"
+    },
+    {
+      "label": "sites · avg circuit_mbps",
+      "value": "612.5",
+      "detail": "min 200 · max 1,000"
+    },
+    {
+      "label": "incidents · records",
+      "value": "28"
+    },
+    {
+      "label": "incidents · avg minutes_to_resolve",
+      "value": "144.3",
+      "detail": "min 29 · max 361"
+    },
+    {
+      "label": "topology · nodes",
+      "value": "8",
+      "detail": "8 links"
+    },
+    {
+      "label": "topology · label values",
+      "value": "8",
+      "detail": "most frequent: San Jose hub"
+    },
+    {
+      "label": "regions · features",
+      "value": "3"
+    },
+    {
+      "label": "regions · name values",
+      "value": "3",
+      "detail": "most frequent: Americas"
+    }
+  ],
+  "specs": [
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_944303add34a",
+      "type": "line",
+      "renderer": "svg",
+      "title": "telemetry · How does latency_ms change over time for each site?",
+      "question": "WAN health by site and region: latency, packet loss and incidents",
+      "data": {
+        "datasetId": "ds_32bd9bafee59"
+      },
+      "encoding": {
+        "x": {
+          "field": "date"
+        },
+        "y": {
+          "field": "latency_ms"
+        },
+        "series": {
+          "field": "site"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false,
+        "link": "_link"
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_aab9389b49d0",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "sites · How does circuit_mbps compare across site_code?",
+      "question": "WAN health by site and region: latency, packet loss and incidents",
+      "data": {
+        "datasetId": "ds_c746acb08e01"
+      },
+      "encoding": {
+        "x": {
+          "field": "site_code"
+        },
+        "y": {
+          "field": "circuit_mbps"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false,
+        "link": "_link"
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_7beb9bf0f0b7",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "incidents · How many records are there per site?",
+      "question": "WAN health by site and region: latency, packet loss and incidents. number of incidents by severity",
+      "data": {
+        "datasetId": "ds_17c4c238cf34"
+      },
+      "encoding": {
+        "x": {
+          "field": "site"
+        },
+        "y": {
+          "field": "site",
+          "aggregate": "count"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false,
+        "link": "_link"
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_4ef768245bc6",
+      "type": "force",
+      "renderer": "svg",
+      "title": "topology · How are entities connected and which are central?",
+      "question": "WAN health by site and region: latency, packet loss and incidents",
+      "data": {
+        "datasetId": "ds_b4c77c4c5bc1"
+      },
+      "encoding": {
+        "color": {
+          "field": "type"
+        },
+        "tooltip": ["avg_latency_ms"]
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false,
+        "link": "_link"
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_1a2fd97df0ab",
+      "type": "geo",
+      "renderer": "svg",
+      "title": "regions · How does avg_latency_ms vary geographically?",
+      "question": "WAN health by site and region: latency, packet loss and incidents. color by avg_latency_ms",
+      "data": {
+        "datasetId": "ds_e78a6c4ca06f"
+      },
+      "encoding": {
+        "color": {
+          "field": "avg_latency_ms"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false,
+        "link": "_link"
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_5b70b48b6685",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "telemetry by region · How does latency_ms compare across region?",
+      "question": "compare latency_ms by region",
+      "data": {
+        "datasetId": "ds_79feefa24b25"
+      },
+      "encoding": {
+        "x": {
+          "field": "region"
+        },
+        "y": {
+          "field": "latency_ms",
+          "aggregate": "mean"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false,
+        "link": "_link"
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_ad1a7caf0594",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "telemetry by region · How does packet_loss_pct compare across region?",
+      "question": "compare latency_ms by region",
+      "data": {
+        "datasetId": "ds_79feefa24b25"
+      },
+      "encoding": {
+        "x": {
+          "field": "region"
+        },
+        "y": {
+          "field": "packet_loss_pct",
+          "aggregate": "mean"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false,
+        "link": "_link"
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_9a6ccb12b078",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "incidents by region · How does minutes_to_resolve compare across region?",
+      "question": "compare minutes_to_resolve by region",
+      "data": {
+        "datasetId": "ds_697dffda9b53"
+      },
+      "encoding": {
+        "x": {
+          "field": "region"
+        },
+        "y": {
+          "field": "minutes_to_resolve",
+          "aggregate": "mean"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false,
+        "link": "_link"
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    }
+  ]
+}

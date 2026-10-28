@@ -1,0 +1,223 @@
+{
+  "title": "SD-WAN health dashboard",
+  "kpis": [],
+  "specs": [
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_5635c98b0750",
+      "type": "line",
+      "renderer": "svg",
+      "title": "How does latency_ms change over time for each site?",
+      "question": "latency_ms over time",
+      "data": {
+        "datasetId": "ds_9ddd7007367c"
+      },
+      "encoding": {
+        "x": {
+          "field": "timestamp"
+        },
+        "y": {
+          "field": "latency_ms"
+        },
+        "series": {
+          "field": "site"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": true,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_1d912b0bbc75",
+      "type": "line",
+      "renderer": "svg",
+      "title": "How does packet_loss_pct change over time for each site?",
+      "question": "packet_loss_pct over time",
+      "data": {
+        "datasetId": "ds_9ddd7007367c"
+      },
+      "encoding": {
+        "x": {
+          "field": "timestamp"
+        },
+        "y": {
+          "field": "packet_loss_pct"
+        },
+        "series": {
+          "field": "site"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": true,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_b8f028381544",
+      "type": "line",
+      "renderer": "svg",
+      "title": "How does throughput_mbps change over time for each site?",
+      "question": "throughput_mbps over time",
+      "data": {
+        "datasetId": "ds_9ddd7007367c"
+      },
+      "encoding": {
+        "x": {
+          "field": "timestamp"
+        },
+        "y": {
+          "field": "throughput_mbps"
+        },
+        "series": {
+          "field": "site"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": true,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_a032e0fd1cde",
+      "type": "force",
+      "renderer": "svg",
+      "title": "How are entities connected and which are central?",
+      "question": "site topology",
+      "data": {
+        "datasetId": "ds_3898237aeda9"
+      },
+      "encoding": {
+        "color": {
+          "field": "group"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {
+        "nodeSizeBy": "degree",
+        "seed": 7
+      }
+    }
+  ]
+}

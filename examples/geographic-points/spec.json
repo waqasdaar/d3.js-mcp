@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "viz_ef0f68b76922",
+  "type": "geo",
+  "renderer": "svg",
+  "title": "Where are the observations located?",
+  "question": "Users by city on a world map",
+  "data": {
+    "datasetId": "ds_1c4f67076abe"
+  },
+  "encoding": {
+    "color": {
+      "field": "city"
+    },
+    "size": {
+      "field": "users"
+    },
+    "label": {
+      "field": "city"
+    },
+    "latitude": {
+      "field": "lat"
+    },
+    "longitude": {
+      "field": "lon"
+    }
+  },
+  "transforms": [],
+  "layout": {
+    "width": 800,
+    "height": 500,
+    "margin": {
+      "top": 56,
+      "right": 24,
+      "bottom": 56,
+      "left": 64
+    },
+    "responsive": true,
+    "pixelRatio": 2
+  },
+  "axes": {},
+  "scales": {},
+  "legend": {
+    "show": true,
+    "position": "right"
+  },
+  "annotations": [],
+  "interaction": {
+    "tooltip": true,
+    "zoom": false,
+    "brush": false,
+    "drag": false,
+    "search": false
+  },
+  "accessibility": {
+    "keyboard": true,
+    "reducedMotion": true
+  },
+  "theme": "light",
+  "options": {
+    "projection": "naturalEarth1",
+    "graticule": true
+  }
+}

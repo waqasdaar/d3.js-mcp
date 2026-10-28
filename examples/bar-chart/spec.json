@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "viz_53ffbeaa7954",
+  "type": "bar",
+  "renderer": "svg",
+  "title": "How does revenue compare across region?",
+  "question": "Compare total revenue by region; highlight the top region",
+  "data": {
+    "datasetId": "ds_42f09f712915"
+  },
+  "encoding": {
+    "x": {
+      "field": "region"
+    },
+    "y": {
+      "field": "revenue",
+      "aggregate": "sum"
+    }
+  },
+  "transforms": [],
+  "layout": {
+    "width": 800,
+    "height": 500,
+    "margin": {
+      "top": 56,
+      "right": 24,
+      "bottom": 56,
+      "left": 64
+    },
+    "responsive": true,
+    "pixelRatio": 2
+  },
+  "axes": {},
+  "scales": {},
+  "legend": {
+    "show": true,
+    "position": "right"
+  },
+  "annotations": [],
+  "interaction": {
+    "tooltip": true,
+    "zoom": false,
+    "brush": false,
+    "drag": false,
+    "search": false,
+    "highlight": ["the top region"]
+  },
+  "accessibility": {
+    "keyboard": true,
+    "reducedMotion": true
+  },
+  "theme": "light",
+  "options": {}
+}

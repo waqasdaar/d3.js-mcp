@@ -1,0 +1,1873 @@
+{
+  "$id": "https://github.com/d3-visualization-mcp/schemas/visualization-spec.schema.json",
+  "title": "D3 MCP visualization specification v1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "default": "1.0",
+      "type": "string",
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,64}$"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "bar",
+        "grouped-bar",
+        "stacked-bar",
+        "line",
+        "area",
+        "stacked-area",
+        "scatter",
+        "bubble",
+        "connected-scatter",
+        "histogram",
+        "boxplot",
+        "density",
+        "heatmap",
+        "pie",
+        "donut",
+        "waterfall",
+        "cumulative",
+        "treemap",
+        "sunburst",
+        "pack",
+        "tree",
+        "cluster",
+        "partition",
+        "force",
+        "radial-network",
+        "chord",
+        "sankey",
+        "geo",
+        "voronoi",
+        "delaunay",
+        "contour",
+        "custom"
+      ]
+    },
+    "renderer": {
+      "default": "svg",
+      "type": "string",
+      "enum": [
+        "svg",
+        "canvas"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "subtitle": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "question": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "datasetId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        }
+      },
+      "required": [
+        "datasetId"
+      ],
+      "additionalProperties": false
+    },
+    "encoding": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "y": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "y2": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "color": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "size": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "shape": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "opacity": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "label": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "series": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "group": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "target": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "id": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "parent": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "latitude": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "longitude": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "order": {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "quantitative",
+                "temporal",
+                "nominal",
+                "ordinal"
+              ]
+            },
+            "aggregate": {
+              "type": "string",
+              "enum": [
+                "sum",
+                "mean",
+                "median",
+                "min",
+                "max",
+                "count"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "description": "d3-format or d3-time-format specifier",
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "field"
+          ]
+        },
+        "tooltip": {
+          "maxItems": 20,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "transforms": {
+      "default": [],
+      "maxItems": 20,
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "filter"
+              },
+              "field": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "eq",
+                  "neq",
+                  "lt",
+                  "lte",
+                  "gt",
+                  "gte",
+                  "in",
+                  "notNull"
+                ]
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": [
+                        "number",
+                        "string"
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "required": [
+              "type",
+              "field",
+              "op"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "aggregate"
+              },
+              "groupBy": {
+                "minItems": 1,
+                "maxItems": 5,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                }
+              },
+              "field": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "sum",
+                  "mean",
+                  "median",
+                  "min",
+                  "max",
+                  "count"
+                ]
+              },
+              "as": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              }
+            },
+            "required": [
+              "type",
+              "groupBy",
+              "op",
+              "as"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "sort"
+              },
+              "field": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "order": {
+                "type": "string",
+                "enum": [
+                  "ascending",
+                  "descending"
+                ]
+              }
+            },
+            "required": [
+              "type",
+              "field",
+              "order"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "limit"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100000
+              }
+            },
+            "required": [
+              "type",
+              "count"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "layout": {
+      "default": {
+        "width": 800,
+        "height": 500,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "type": "object",
+      "properties": {
+        "width": {
+          "default": 800,
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 8000
+        },
+        "height": {
+          "default": 500,
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 8000
+        },
+        "margin": {
+          "default": {
+            "top": 56,
+            "right": 24,
+            "bottom": 56,
+            "left": 64
+          },
+          "type": "object",
+          "properties": {
+            "top": {
+              "default": 56,
+              "type": "number",
+              "minimum": 0,
+              "maximum": 500
+            },
+            "right": {
+              "default": 24,
+              "type": "number",
+              "minimum": 0,
+              "maximum": 500
+            },
+            "bottom": {
+              "default": 56,
+              "type": "number",
+              "minimum": 0,
+              "maximum": 500
+            },
+            "left": {
+              "default": 64,
+              "type": "number",
+              "minimum": 0,
+              "maximum": 500
+            }
+          },
+          "additionalProperties": false
+        },
+        "responsive": {
+          "default": true,
+          "type": "boolean"
+        },
+        "pixelRatio": {
+          "default": 2,
+          "type": "number",
+          "minimum": 1,
+          "maximum": 4
+        }
+      },
+      "additionalProperties": false
+    },
+    "axes": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "object",
+          "properties": {
+            "show": {
+              "default": true,
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "type": "string",
+              "maxLength": 40
+            },
+            "ticks": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 50
+            },
+            "grid": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "y": {
+          "type": "object",
+          "properties": {
+            "show": {
+              "default": true,
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "format": {
+              "type": "string",
+              "maxLength": 40
+            },
+            "ticks": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 50
+            },
+            "grid": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "scales": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "linear",
+                "log",
+                "pow",
+                "sqrt",
+                "symlog",
+                "time",
+                "utc",
+                "band",
+                "point"
+              ]
+            },
+            "domain": {
+              "maxItems": 1000,
+              "type": "array",
+              "items": {
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
+            },
+            "nice": {
+              "type": "boolean"
+            },
+            "zero": {
+              "type": "boolean"
+            },
+            "exponent": {
+              "type": "number"
+            },
+            "reverse": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "y": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "linear",
+                "log",
+                "pow",
+                "sqrt",
+                "symlog",
+                "time",
+                "utc",
+                "band",
+                "point"
+              ]
+            },
+            "domain": {
+              "maxItems": 1000,
+              "type": "array",
+              "items": {
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
+            },
+            "nice": {
+              "type": "boolean"
+            },
+            "zero": {
+              "type": "boolean"
+            },
+            "exponent": {
+              "type": "number"
+            },
+            "reverse": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "size": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "linear",
+                "log",
+                "pow",
+                "sqrt",
+                "symlog",
+                "time",
+                "utc",
+                "band",
+                "point"
+              ]
+            },
+            "domain": {
+              "maxItems": 1000,
+              "type": "array",
+              "items": {
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
+            },
+            "nice": {
+              "type": "boolean"
+            },
+            "zero": {
+              "type": "boolean"
+            },
+            "exponent": {
+              "type": "number"
+            },
+            "reverse": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "color": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "ordinal",
+                "sequential",
+                "diverging",
+                "quantize",
+                "quantile",
+                "threshold"
+              ]
+            },
+            "scheme": {
+              "description": "d3-scale-chromatic scheme name, e.g. Tableau10, Viridis, RdBu",
+              "type": "string",
+              "maxLength": 40
+            },
+            "domain": {
+              "maxItems": 1000,
+              "type": "array",
+              "items": {
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
+            },
+            "range": {
+              "description": "Explicit CSS colors",
+              "maxItems": 256,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 40
+              }
+            },
+            "thresholds": {
+              "maxItems": 50,
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "legend": {
+      "default": {
+        "show": true,
+        "position": "right"
+      },
+      "type": "object",
+      "properties": {
+        "show": {
+          "default": true,
+          "type": "boolean"
+        },
+        "position": {
+          "default": "right",
+          "type": "string",
+          "enum": [
+            "right",
+            "top",
+            "bottom"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "annotations": {
+      "default": [],
+      "maxItems": 50,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "rule",
+              "band",
+              "text"
+            ]
+          },
+          "axis": {
+            "default": "y",
+            "type": "string",
+            "enum": [
+              "x",
+              "y"
+            ]
+          },
+          "value": {
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "from": {
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "to": {
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "color": {
+            "type": "string",
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "interaction": {
+      "default": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "type": "object",
+      "properties": {
+        "tooltip": {
+          "default": true,
+          "type": "boolean"
+        },
+        "zoom": {
+          "default": false,
+          "type": "boolean"
+        },
+        "brush": {
+          "default": false,
+          "type": "boolean"
+        },
+        "drag": {
+          "default": false,
+          "type": "boolean"
+        },
+        "search": {
+          "default": false,
+          "type": "boolean"
+        },
+        "highlight": {
+          "maxItems": 100,
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "number"
+            ]
+          }
+        },
+        "link": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "additionalProperties": false
+    },
+    "accessibility": {
+      "default": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "type": "object",
+      "properties": {
+        "ariaLabel": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "keyboard": {
+          "default": true,
+          "type": "boolean"
+        },
+        "reducedMotion": {
+          "default": true,
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "theme": {
+      "default": "light",
+      "type": "string",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    },
+    "options": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "orientation": {
+          "type": "string",
+          "enum": [
+            "vertical",
+            "horizontal"
+          ]
+        },
+        "curve": {
+          "type": "string",
+          "enum": [
+            "linear",
+            "monotoneX",
+            "step",
+            "basis",
+            "cardinal",
+            "catmullRom",
+            "natural"
+          ]
+        },
+        "innerRadius": {
+          "description": "Fraction of outer radius (donut/sunburst)",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.95
+        },
+        "bins": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 500
+        },
+        "bandwidth": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 200
+        },
+        "tile": {
+          "type": "string",
+          "enum": [
+            "squarify",
+            "binary",
+            "slice",
+            "dice",
+            "sliceDice",
+            "resquarify"
+          ]
+        },
+        "stackOffset": {
+          "type": "string",
+          "enum": [
+            "none",
+            "expand",
+            "diverging",
+            "silhouette",
+            "wiggle"
+          ]
+        },
+        "stackOrder": {
+          "type": "string",
+          "enum": [
+            "none",
+            "ascending",
+            "descending",
+            "insideOut",
+            "reverse",
+            "appearance"
+          ]
+        },
+        "projection": {
+          "type": "string",
+          "enum": [
+            "mercator",
+            "equirectangular",
+            "naturalEarth1",
+            "albers",
+            "albersUsa",
+            "orthographic",
+            "equalEarth",
+            "conicEqualArea",
+            "transverseMercator",
+            "azimuthalEqualArea",
+            "stereographic",
+            "gnomonic"
+          ]
+        },
+        "graticule": {
+          "type": "boolean"
+        },
+        "iterations": {
+          "description": "Force simulation ticks",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "linkDistance": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "chargeStrength": {
+          "type": "number",
+          "minimum": -5000,
+          "maximum": 0
+        },
+        "nodeSizeBy": {
+          "type": "string",
+          "enum": [
+            "degree",
+            "value",
+            "constant"
+          ]
+        },
+        "iconField": {
+          "description": "Node field whose value names the icon (auto: 'icon' if present)",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "iconMap": {
+          "description": "Map field values to icon names, e.g. {hub:'router', branch:'switch'}; applied to iconField or the color/group field",
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "additionalProperties": {
+            "type": "string",
+            "maxLength": 40
+          }
+        },
+        "icons": {
+          "description": "Custom icons by name: {paths:[{d,fill?,stroke?}], viewBox?} or {svg:'<svg>…</svg>'}",
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,40}$"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "viewBox": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  }
+                ],
+                "items": false,
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "paths": {
+                "minItems": 1,
+                "maxItems": 64,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "d": {
+                      "type": "string",
+                      "pattern": "^[MmLlHhVvCcSsQqTtAaZz0-9eE.,\\s+-]{1,20000}$"
+                    },
+                    "fill": {
+                      "type": "string",
+                      "pattern": "^(#[0-9a-fA-F]{3,8}|[a-zA-Z]{3,24}|rgba?\\([0-9\\s.,%]+\\)|hsla?\\([0-9\\s.,%deg]+\\))$"
+                    },
+                    "stroke": {
+                      "type": "string",
+                      "pattern": "^(#[0-9a-fA-F]{3,8}|[a-zA-Z]{3,24}|rgba?\\([0-9\\s.,%]+\\)|hsla?\\([0-9\\s.,%deg]+\\))$"
+                    },
+                    "strokeWidth": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 100
+                    },
+                    "fillRule": {
+                      "type": "string",
+                      "enum": [
+                        "nonzero",
+                        "evenodd"
+                      ]
+                    },
+                    "linecap": {
+                      "type": "string",
+                      "enum": [
+                        "butt",
+                        "round",
+                        "square"
+                      ]
+                    },
+                    "linejoin": {
+                      "type": "string",
+                      "enum": [
+                        "miter",
+                        "round",
+                        "bevel"
+                      ]
+                    },
+                    "transform": {
+                      "type": "string",
+                      "pattern": "^\\s*((matrix|translate|scale|rotate|skewX|skewY)\\s*\\([0-9eE\\s.,+-]*\\)\\s*,?\\s*){1,8}$"
+                    }
+                  },
+                  "required": [
+                    "d"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "svg": {
+                "description": "SVG markup of a single icon; only basic shapes are kept (path, circle, ellipse, rect, line, polyline, polygon)",
+                "type": "string",
+                "maxLength": 50000
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "iconStyle": {
+          "description": "badge: white icon on a colored disc (default); plain: colored icon, no disc",
+          "type": "string",
+          "enum": [
+            "badge",
+            "plain"
+          ]
+        },
+        "tierField": {
+          "description": "Arrange nodes in horizontal layers by this field (e.g. core/distribution/access)",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "tierOrder": {
+          "description": "Top-to-bottom order of tier values",
+          "maxItems": 20,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "showLabels": {
+          "type": "boolean"
+        },
+        "labelLimit": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "showPoints": {
+          "type": "boolean"
+        },
+        "thresholds": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 100
+        },
+        "radial": {
+          "type": "boolean"
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "shapes": {
+          "description": "Declarative primitives for the 'custom' visualization type",
+          "maxItems": 5000,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "rect",
+                  "circle",
+                  "line",
+                  "text",
+                  "symbol"
+                ]
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 8000
+              },
+              "height": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 8000
+              },
+              "r": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 4000
+              },
+              "x2": {
+                "type": "number"
+              },
+              "y2": {
+                "type": "number"
+              },
+              "text": {
+                "type": "string",
+                "maxLength": 500
+              },
+              "symbol": {
+                "type": "string",
+                "enum": [
+                  "circle",
+                  "cross",
+                  "diamond",
+                  "square",
+                  "star",
+                  "triangle",
+                  "wye"
+                ]
+              },
+              "size": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100000
+              },
+              "fill": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "stroke": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "tooltip": {
+                "type": "string",
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "kind",
+              "x",
+              "y"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "data"
+  ],
+  "additionalProperties": false
+}

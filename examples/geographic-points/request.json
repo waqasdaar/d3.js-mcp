@@ -1,0 +1,66 @@
+{
+  "tool": "d3_visualize",
+  "arguments": {
+    "data": [
+      {
+        "city": "San Jose",
+        "lat": 37.34,
+        "lon": -121.89,
+        "users": 1200
+      },
+      {
+        "city": "New York",
+        "lat": 40.71,
+        "lon": -74,
+        "users": 3400
+      },
+      {
+        "city": "London",
+        "lat": 51.5,
+        "lon": -0.12,
+        "users": 2900
+      },
+      {
+        "city": "Tokyo",
+        "lat": 35.68,
+        "lon": 139.69,
+        "users": 3100
+      },
+      {
+        "city": "Sydney",
+        "lat": -33.87,
+        "lon": 151.21,
+        "users": 900
+      },
+      {
+        "city": "São Paulo",
+        "lat": -23.55,
+        "lon": -46.63,
+        "users": 1500
+      }
+    ],
+    "prompt": "Users by city on a world map",
+    "visualization_type": "geo",
+    "options": {
+      "encoding": {
+        "latitude": {
+          "field": "lat"
+        },
+        "longitude": {
+          "field": "lon"
+        },
+        "size": {
+          "field": "users"
+        },
+        "label": {
+          "field": "city"
+        }
+      },
+      "options": {
+        "projection": "naturalEarth1",
+        "graticule": true
+      }
+    },
+    "output_formats": ["html", "svg", "png"]
+  }
+}

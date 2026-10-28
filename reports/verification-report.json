@@ -1,0 +1,180 @@
+{
+  "generatedAt": "2026-10-28T15:47:59.433Z",
+  "overall": "passed",
+  "environment": {
+    "node": "v26.12.1 (/opt/homebrew/Cellar/node/26.12.1_1/bin/node)",
+    "platform": "darwin 27.0.0 arm64",
+    "cpus": "12 × Apple M4 Pro",
+    "memory": "24 GiB",
+    "chromium": "156.0.8078.4",
+    "d3": "7.9.0",
+    "packageRoot": "<project>"
+  },
+  "steps": [
+    {
+      "name": "verify-install",
+      "command": "npx tsx scripts/verify-install.ts",
+      "mandatory": true,
+      "status": "passed",
+      "durationMs": 793,
+      "summary": "ok",
+      "outputTail": "      \"check\": \"package-lock.json\",\n      \"ok\": true,\n      \"mandatory\": true,\n      \"detail\": \"\"\n    },\n    {\n      \"check\": \"build output\",\n      \"ok\": true,\n      \"mandatory\": false,\n      \"detail\": \"dist/server/index.js (run npm run build)\"\n    },\n    {\n      \"check\": \"D3 API inventory\",\n      \"ok\": true,\n      \"mandatory\": true,\n      \"detail\": \"data/d3-api-inventory.json\"\n    },\n    {\n      \"check\": \"Chromium (PNG/PDF/browser validation)\",\n      \"ok\": true,\n      \"mandatory\": false,\n      \"detail\": \"version 156.0.8078.4\"\n    }\n  ]\n}\nOK    node >= 20.19 — v26.12.1 at /opt/homebrew/Cellar/node/26.12.1_1/bin/node\nOK    dependency @modelcontextprotocol/sdk — installed 1.32.2 (pinned 1.32.2)\nOK    dependency d3 — installed 7.9.0 (pinned 7.9.0)\nOK    dependency d3-sankey — installed 0.12.3 (pinned 0.12.3)\nOK    dependency jsdom — installed 30.1.3 (pinned 30.1.3)\nOK    dependency playwright — installed 1.64.1 (pinned 1.64.1)\nOK    dependency topojson-client — installed 3.1.0 (pinned 3.1.0)\nOK    dependency xlsx — installed 0.20.3 (pinned file:vendor/xlsx-0.20.3.tgz)\nOK    dependency yaml — installed 2.9.1 (pinned 2.9.1)\nOK    dependency zod — installed 4.6.7 (pinned 4.6.7)\nOK    package-lock.json\nOK    build output — dist/server/index.js (run npm run build)\nOK    D3 API inventory — data/d3-api-inventory.json\nOK    Chromium (PNG/PDF/browser validation) — version 156.0.8078.4\n"
+    },
+    {
+      "name": "lint",
+      "command": "npx eslint .",
+      "mandatory": true,
+      "status": "passed",
+      "durationMs": 1476,
+      "summary": "0 problems",
+      "outputTail": ""
+    },
+    {
+      "name": "format check",
+      "command": "npx prettier --check src tests scripts",
+      "mandatory": false,
+      "status": "passed",
+      "durationMs": 1135,
+      "summary": "all files formatted",
+      "outputTail": "Checking formatting...\nAll matched files use Prettier code style!\n"
+    },
+    {
+      "name": "typecheck",
+      "command": "npx tsc -p tsconfig.json --noEmit",
+      "mandatory": true,
+      "status": "passed",
+      "durationMs": 1895,
+      "summary": "ok",
+      "outputTail": ""
+    },
+    {
+      "name": "build",
+      "command": "npx tsc -p tsconfig.build.json",
+      "mandatory": true,
+      "status": "passed",
+      "durationMs": 1623,
+      "summary": "ok",
+      "outputTail": ""
+    },
+    {
+      "name": "schema",
+      "command": "npx tsx scripts/generate-schema.ts",
+      "mandatory": true,
+      "status": "passed",
+      "durationMs": 539,
+      "summary": "ok",
+      "outputTail": "Wrote <project>/schemas/visualization-spec.schema.json\n"
+    },
+    {
+      "name": "workbench typecheck",
+      "command": "npx tsc -p workbench/tsconfig.json",
+      "mandatory": false,
+      "status": "passed",
+      "durationMs": 1133,
+      "summary": "ok",
+      "outputTail": ""
+    },
+    {
+      "name": "workbench build (Vite)",
+      "command": "npx vite build --config workbench/vite.config.ts",
+      "mandatory": false,
+      "status": "passed",
+      "durationMs": 646,
+      "summary": "ok",
+      "outputTail": "\u001b[36mvite v8.3.5 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m\ntransforming...\n✓ 910 modules transformed.\nrendering chunks...\ncomputing gzip size...\nworkbench/dist/index.html                    0.33 kB │ gzip:   0.23 kB\nworkbench/dist/assets/index-lmOinSo5.js  1,213.59 kB │ gzip: 392.97 kB\n\n\u001b[32m✓ built in 189ms\u001b[39m\n"
+    },
+    {
+      "name": "unit + security tests",
+      "command": "npx vitest run --config vitest.config.ts",
+      "mandatory": true,
+      "status": "passed",
+      "durationMs": 8388,
+      "summary": "212/212 passed, 0 failed, 0 skipped",
+      "outputTail": " \u001b[32m✓\u001b[39m tests/unit/icons.test.ts \u001b[2m(\u001b[22m\u001b[2m12 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 501\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m✓\u001b[39m tests/unit/planning.test.ts \u001b[2m(\u001b[22m\u001b[2m14 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 17\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m✓\u001b[39m tests/unit/renderers.test.ts \u001b[2m(\u001b[22m\u001b[2m27 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 905\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m✓\u001b[39m tests/security/security.test.ts \u001b[2m(\u001b[22m\u001b[2m15 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 1061\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[32m✓\u001b[39m untrusted data is escaped \u001b[2m(4)\u001b[22m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m malicious labels are escaped in standalone HTML\u001b[33m 862\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m✓\u001b[39m tests/unit/service.test.ts \u001b[2m(\u001b[22m\u001b[2m7 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 3692\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[32m✓\u001b[39m VisualizationService \u001b[2m(6)\u001b[22m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m renders an artifact and writes SVG, HTML, JSON and CSV\u001b[33m 972\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m builds dashboards from several specs\u001b[33m 750\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m reports export failures instead of fake success for unavailable formats\u001b[33m 663\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m switches large scatterplots to canvas or reports limits\u001b[33m 1283\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m✓\u001b[39m tests/unit/dashboard.test.ts \u001b[2m(\u001b[22m\u001b[2m16 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 5327\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[32m✓\u001b[39m analytical soundness (found in visual review) \u001b[2m(4)\u001b[22m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m balances KPI tiles across datasets and derives the title from the goal\u001b[33m 1651\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[32m✓\u001b[39m autoDashboard (service) \u001b[2m(3)\u001b[22m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m renders a validated dashboard with KPI tiles, charts and a shared time brush\u001b[33m 1709\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m labels charts and KPIs per dataset and escapes hostile field names\u001b[33m 1345\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m reports why no chart could be built instead of producing an empty dashboard\u001b[33m 606\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m✓\u001b[39m tests/unit/pool.test.ts \u001b[2m(\u001b[22m\u001b[2m5 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 6773\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[32m✓\u001b[39m RenderPool \u001b[2m(5)\u001b[22m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m renders in a worker with the same result as inline rendering\u001b[33m 815\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m preserves error codes and hints across the worker boundary\u001b[33m 687\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m keeps the event loop responsive while a 2,000-node force layout runs\u001b[33m 3097\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m renders concurrent jobs in parallel and queues beyond pool size\u001b[33m 624\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m terminates a render that exceeds the timeout and recovers\u001b[33m 1548\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m12 passed\u001b[39m\u001b[22m\u001b[90m (12)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m212 passed\u001b[39m\u001b[22m\u001b[90m (212)\u001b[39m\n\u001b[2m   Start at \u001b[22m 16:46:40\n\u001b[2m   Duration \u001b[22m 7.87s\u001b[2m (tests 64%, import 34%, transform 2%)\u001b[22m\n\nJSON report written to <project>/reports/unit-results.json\n(node:47267) [TAG_RESOLVE_FAILED] YAMLWarning: Unresolved tag: tag:yaml.org,2002:js/function at line 1, column 6:\n\n- a: !!js/function 'function(){ globalThis.pwned = 1 }'\n     ^^^^^^^^^^^^^\n\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "name": "MCP integration tests",
+      "command": "npx vitest run --config vitest.integration.config.ts",
+      "mandatory": true,
+      "status": "passed",
+      "durationMs": 9867,
+      "summary": "46/46 passed, 0 failed, 0 skipped",
+      "outputTail": "\n\u001b[1m\u001b[30m\u001b[46m RUN \u001b[49m\u001b[39m\u001b[22m \u001b[36mv5.0.5 \u001b[39m\u001b[90m<project>\u001b[39m\n\n \u001b[32m✓\u001b[39m tests/integration/mcp.test.ts \u001b[2m(\u001b[22m\u001b[2m37 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 5859\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[32m✓\u001b[39m end-to-end scenarios \u001b[2m(10)\u001b[22m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m 1. JSON → bar chart → SVG + HTML\u001b[33m 458\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m 2. time-series CSV → line chart (PNG reported truthfully)\u001b[33m 417\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m 6. multiple measures → composed dashboard\u001b[33m 473\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m 10. large dataset → controlled behaviour with documented limits\u001b[33m 342\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[32m✓\u001b[39m automatic dashboards (d3_create_dashboard) \u001b[2m(4)\u001b[22m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m 16. data + goal only → multi-chart dashboard with KPIs and a shared time brush\u001b[33m 392\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[32m✓\u001b[39m multi-source linking with MCP elicitation \u001b[2m(2)\u001b[22m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m 25. asks the user through elicitation and uses the chosen link\u001b[33m 978\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m✓\u001b[39m tests/integration/http.test.ts \u001b[2m(\u001b[22m\u001b[2m9 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 2961\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[32m✓\u001b[39m Streamable HTTP transport (loopback, no token) \u001b[2m(6)\u001b[22m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m serves the full tool set to the official SDK client and renders a chart\u001b[33m 494\u001b[2mms\u001b[22m\u001b[39m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m keeps independent sessions and handles concurrent heavy renders\u001b[33m 1026\u001b[2mms\u001b[22m\u001b[39m\n   \u001b[32m✓\u001b[39m Streamable HTTP transport (unsafe configuration) \u001b[2m(1)\u001b[22m\n     \u001b[33m\u001b[2m✓\u001b[22m\u001b[39m refuses to bind a non-loopback host without a token\u001b[33m 466\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m2 passed\u001b[39m\u001b[22m\u001b[90m (2)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m46 passed\u001b[39m\u001b[22m\u001b[90m (46)\u001b[39m\n\u001b[2m   Start at \u001b[22m 16:46:49\n\u001b[2m   Duration \u001b[22m 9.38s\u001b[2m (tests 97%, import 3%)\u001b[22m\n\nJSON report written to <project>/reports/integration-results.json\n"
+    },
+    {
+      "name": "browser tests (Playwright)",
+      "command": "npx playwright test",
+      "mandatory": true,
+      "status": "passed",
+      "durationMs": 14223,
+      "summary": "27 passed, 0 failed, 0 skipped, 0 flaky",
+      "outputTail": "\nRunning 27 tests using 1 worker\n\n  ✓   1 [functional] › tests/browser/artifacts.spec.ts:70:1 › bar chart: marks, axes, title, tooltip, keyboard, responsive (908ms)\n  ✓   2 [functional] › tests/browser/artifacts.spec.ts:104:1 › line chart with brush selects a time range (331ms)\n  ✓   3 [functional] › tests/browser/artifacts.spec.ts:131:1 › force graph: geometry, zoom, search, drag (289ms)\n  ✓   4 [functional] › tests/browser/artifacts.spec.ts:164:1 › topology icons: centred on nodes, follow drag, dim with search (373ms)\n  ✓   5 [functional] › tests/browser/artifacts.spec.ts:207:1 › hierarchy: treemap and sunburst geometry (266ms)\n  ✓   6 [functional] › tests/browser/artifacts.spec.ts:226:1 › geo: projected choropleth paths are inside the viewport (162ms)\n  ✓   7 [functional] › tests/browser/artifacts.spec.ts:249:1 › dashboard: shared category filter dims non-matching marks across charts (736ms)\n  ✓   8 [functional] › tests/browser/artifacts.spec.ts:296:1 › linked dashboard: clicking a site or region selects it in every chart and lists its records (1.8s)\n  ✓   9 [functional] › tests/browser/artifacts.spec.ts:352:1 › large scatter uses canvas and draws non-blank pixels (890ms)\n  ✓  10 [functional] › tests/browser/artifacts.spec.ts:377:1 › PNG export is a valid, non-blank image (306ms)\n  ✓  11 [functional] › tests/browser/workbench.spec.ts:46:1 › workbench renders the sample with D3 inside a React host and re-renders on type change (201ms)\n  ✓  12 [visual] › tests/browser/visual.spec.ts:162:3 › visual: bar (855ms)\n  ✓  13 [visual] › tests/browser/visual.spec.ts:162:3 › visual: bar-dark-annotated (265ms)\n  ✓  14 [visual] › tests/browser/visual.spec.ts:162:3 › visual: grouped-bar (227ms)\n  ✓  15 [visual] › tests/browser/visual.spec.ts:162:3 › visual: line-multi (286ms)\n  ✓  16 [visual] › tests/browser/visual.spec.ts:162:3 › visual: scatter (268ms)\n  ✓  17 [visual] › tests/browser/visual.spec.ts:162:3 › visual: heatmap (215ms)\n  ✓  18 [visual] › tests/browser/visual.spec.ts:162:3 › visual: pie (215ms)\n  ✓  19 [visual] › tests/browser/visual.spec.ts:162:3 › visual: treemap (212ms)\n  ✓  20 [visual] › tests/browser/visual.spec.ts:162:3 › visual: sunburst (250ms)\n  ✓  21 [visual] › tests/browser/visual.spec.ts:162:3 › visual: force (264ms)\n  ✓  22 [visual] › tests/browser/visual.spec.ts:162:3 › visual: sankey (211ms)\n  ✓  23 [visual] › tests/browser/visual.spec.ts:162:3 › visual: topology-icons-tiered (266ms)\n  ✓  24 [visual] › tests/browser/visual.spec.ts:162:3 › visual: topology-custom-icons (268ms)\n  ✓  25 [visual] › tests/browser/visual.spec.ts:162:3 › visual: geo-choropleth (213ms)\n  ✓  26 [visual] › tests/browser/visual.spec.ts:168:1 › visual: dashboard (full page) (742ms)\n  ✓  27 [visual] › tests/browser/visual.spec.ts:198:1 › visual comparison detects a single changed bar (519ms)\n\n  27 passed (13.7s)\n"
+    },
+    {
+      "name": "MCP smoke test",
+      "command": "npx tsx scripts/smoke.ts",
+      "mandatory": true,
+      "status": "passed",
+      "durationMs": 2180,
+      "summary": "passed: 12/12 checks passed",
+      "outputTail": "    {\n      \"name\": \"browser renders 4 bars\",\n      \"mandatory\": true,\n      \"passed\": true,\n      \"detail\": \"4 bars\"\n    },\n    {\n      \"name\": \"no page errors\",\n      \"mandatory\": true,\n      \"passed\": true,\n      \"detail\": \"\"\n    },\n    {\n      \"name\": \"PNG export\",\n      \"mandatory\": false,\n      \"passed\": true,\n      \"detail\": \"/var/folders/rc/h746dfwn77x9kwx__3bt8fjc0000gn/T/d3mcp-smoke-BDHYNV/default/art_2f57d90184d4/chart.png\"\n    },\n    {\n      \"name\": \"invalid input returns isError (no false success)\",\n      \"mandatory\": true,\n      \"passed\": true,\n      \"detail\": \"\"\n    }\n  ]\n}\nPASS  server build exists — <project>/dist/server/index.js\nPASS  connect + initialize — d3-visualization-mcp 0.1.0\nPASS  enumerate tools — 17 tools\nPASS  d3_visualize bar chart — art_2f57d90184d4\nPASS  specification returned\nPASS  html file exists and is non-empty — /var/folders/rc/h746dfwn77x9kwx__3bt8fjc0000gn/T/d3mcp-smoke-BDHYNV/default/art_2f57d90184d4/chart.html\nPASS  svg file exists and is non-empty — /var/folders/rc/h746dfwn77x9kwx__3bt8fjc0000gn/T/d3mcp-smoke-BDHYNV/default/art_2f57d90184d4/chart.svg\nPASS  SVG contains 4 bars\nPASS  browser renders 4 bars — 4 bars\nPASS  no page errors\nPASS  PNG export — /var/folders/rc/h746dfwn77x9kwx__3bt8fjc0000gn/T/d3mcp-smoke-BDHYNV/default/art_2f57d90184d4/chart.png\n{\"ts\":\"2026-10-28T15:47:15.359Z\",\"level\":\"warn\",\"msg\":\"tool error\",\"tool\":\"d3_visualize\",\"code\":\"INVALID_INPUT\",\"message\":\"Dataset contains no records\"}\nPASS  invalid input returns isError (no false success)\n"
+    },
+    {
+      "name": "D3 coverage report",
+      "command": "npx tsx scripts/coverage-report.ts",
+      "mandatory": true,
+      "status": "passed",
+      "durationMs": 615,
+      "summary": "ok",
+      "outputTail": ""
+    },
+    {
+      "name": "D3 API drift check (network)",
+      "command": "npx tsx scripts/audit-d3-api.ts --check",
+      "mandatory": false,
+      "status": "passed",
+      "durationMs": 792,
+      "summary": "1117 live entries; 0 added, 0 removed vs committed snapshot",
+      "outputTail": "{\n  \"checkedAt\": \"2026-10-28T15:47:16.787Z\",\n  \"snapshotEntries\": 1117,\n  \"liveEntries\": 1117,\n  \"added\": [],\n  \"removed\": [],\n  \"changedDescriptions\": []\n}\n(node:47777) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "name": "examples",
+      "command": "npx tsx scripts/generate-examples.ts",
+      "mandatory": false,
+      "status": "passed",
+      "durationMs": 35364,
+      "summary": "9 examples generated",
+      "outputTail": "bar-chart: bar, 4 marks, 4 files\ntime-series: line, 3 marks, 4 files\nnetwork-graph: force, 12 marks, 4 files\ntopology-icons: force, 14 marks, 4 files\ntopology-custom-icons: force, 14 marks, 4 files\nhierarchy: treemap, 10 marks, 4 files\nhierarchy-sunburst: sunburst, 13 marks, 4 files\ngeographic-map: geo, 6 marks, 4 files\ngeographic-points: geo, 6 marks, 4 files\nauto-dashboard: line, line, line, bar, bar, scatter; 6 KPIs\nauto-dashboard-excel: bar, bar, scatter, bar, bar, bar; 12 KPIs\nlinked-dashboard: telemetry:line, sites:bar, incidents:bar, topology:force, regions:geo, telemetry by region:bar, telemetry by region:bar, incidents by region:bar\nExamples written to <project>/examples\n"
+    },
+    {
+      "name": "benchmark",
+      "command": "npx tsx scripts/benchmark.ts",
+      "mandatory": false,
+      "status": "passed",
+      "durationMs": 7269,
+      "summary": "10/10 cases ok (reports/benchmark.json)",
+      "outputTail": "ok   bar 50 categories                 626 ms  0.33 MB HTML\nok   line 10k points / 4 series        111 ms  0.46 MB HTML\nok   scatter 1k (SVG)                  185 ms  0.59 MB HTML\nok   scatter 10k (SVG)                 179 ms  1.52 MB HTML\nok   scatter 50k (canvas)              663 ms  6.38 MB HTML\nok   histogram 50k                     175 ms  0.31 MB HTML\nok   force 500 nodes / ~1k links       600 ms  0.67 MB HTML\nok   force 2k nodes / ~4k links       2801 ms  1.78 MB HTML\nok   treemap 5k leaves                 855 ms  1.98 MB HTML\nok   contour 20k points                104 ms  0.46 MB HTML\n"
+    }
+  ],
+  "coverage": {
+    "source": "https://raw.githubusercontent.com/d3/d3/v7.9.0/docs/api.md",
+    "retrievedAt": "2026-10-28T15:45:53.319Z",
+    "countingMethod": "One entry per bullet in the official API index (docs/api.md): top-level exports, constructors, instance invocations (*x*) and instance methods (*x*.method). Duplicated bullets are counted once per module.",
+    "totals": {
+      "implemented-and-tested": 211,
+      "implemented-with-constraints": 21,
+      "available-through-safe-composition": 244,
+      "documented-but-not-yet-implemented": 630,
+      "unsupported-by-current-runtime": 11,
+      "total": 1117,
+      "percentages": {
+        "implemented-and-tested": 18.89,
+        "implemented-with-constraints": 1.88,
+        "available-through-safe-composition": 21.84,
+        "documented-but-not-yet-implemented": 56.4,
+        "unsupported-by-current-runtime": 0.98
+      }
+    }
+  },
+  "outstandingFailures": []
+}

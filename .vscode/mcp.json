@@ -1,0 +1,14 @@
+{
+  "servers": {
+    "d3-visualization": {
+      "type": "stdio",
+      "command": "/opt/homebrew/bin/node",
+      "args": ["${workspaceFolder}/dist/server/index.js"],
+      "env": {
+        "D3MCP_DATA_DIRS": "${workspaceFolder}/examples/data-files",
+        "D3MCP_LOG_LEVEL": "info"
+      },
+      "dev": { "watch": "dist/**/*.js" }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+region|product|quarter|revenue|units
+North|Router|Q1|120|30
+North|Switch|Q1|80|44
+South|Router|Q1|95|25
+South|Switch|Q1|60|31
+East|Router|Q1|150|41
+East|Switch|Q1|70|35
+West|Router|Q1|40|12
+West|Switch|Q1|55|29
+North|Router|Q2|130|33
+South|Switch|Q2|66|34
+East|Router|Q2|160|45
+West|Switch|Q2|58|30

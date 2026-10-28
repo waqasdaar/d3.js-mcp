@@ -1,0 +1,58 @@
+nodes:
+  - id: SJC
+    label: San Jose hub
+    type: router
+    role: hub
+  - id: DAL
+    label: Dallas edge
+    type: sd-wan
+    role: branch
+  - id: NYC
+    label: New York edge
+    type: sd-wan
+    role: branch
+  - id: LON
+    label: London hub
+    type: router
+    role: hub
+  - id: FRA
+    label: Frankfurt edge
+    type: sd-wan
+    role: branch
+  - id: DXB
+    label: Dubai edge
+    type: sd-wan
+    role: branch
+  - id: SIN
+    label: Singapore hub
+    type: router
+    role: hub
+  - id: SYD
+    label: Sydney edge
+    type: sd-wan
+    role: branch
+links:
+  - source: SJC
+    target: DAL
+    bandwidth_mbps: 500
+  - source: SJC
+    target: NYC
+    bandwidth_mbps: 1000
+  - source: LON
+    target: FRA
+    bandwidth_mbps: 500
+  - source: LON
+    target: DXB
+    bandwidth_mbps: 200
+  - source: SIN
+    target: SYD
+    bandwidth_mbps: 200
+  - source: SJC
+    target: LON
+    bandwidth_mbps: 10000
+  - source: LON
+    target: SIN
+    bandwidth_mbps: 10000
+  - source: SIN
+    target: SJC
+    bandwidth_mbps: 10000

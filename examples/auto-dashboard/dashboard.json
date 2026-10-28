@@ -1,0 +1,362 @@
+{
+  "title": "SD-WAN health by site: latency, packet loss and throughput",
+  "kpis": [
+    {
+      "label": "records",
+      "value": "144"
+    },
+    {
+      "label": "avg latency_ms",
+      "value": "61.15",
+      "detail": "min 12.5 · max 222.4"
+    },
+    {
+      "label": "avg packet_loss_pct",
+      "value": "0.4147",
+      "detail": "min 0.2 · max 2.94"
+    },
+    {
+      "label": "avg throughput_mbps",
+      "value": "563.3",
+      "detail": "min 400 · max 740"
+    },
+    {
+      "label": "timestamp range",
+      "value": "Oct 1, 2026 – Oct 2, 2026",
+      "detail": "144 timestamps"
+    },
+    {
+      "label": "site values",
+      "value": "3",
+      "detail": "most frequent: SJC"
+    }
+  ],
+  "specs": [
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_6fc5da9ae4ac",
+      "type": "line",
+      "renderer": "svg",
+      "title": "How does latency_ms change over time for each site?",
+      "question": "SD-WAN health by site: latency, packet loss and throughput",
+      "data": {
+        "datasetId": "ds_805ba0ddcfa2"
+      },
+      "encoding": {
+        "x": {
+          "field": "timestamp"
+        },
+        "y": {
+          "field": "latency_ms"
+        },
+        "series": {
+          "field": "site"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": true,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_a7eaf2853660",
+      "type": "line",
+      "renderer": "svg",
+      "title": "How does packet_loss_pct change over time for each site?",
+      "question": "SD-WAN health by site: latency, packet loss and throughput",
+      "data": {
+        "datasetId": "ds_805ba0ddcfa2"
+      },
+      "encoding": {
+        "x": {
+          "field": "timestamp"
+        },
+        "y": {
+          "field": "packet_loss_pct"
+        },
+        "series": {
+          "field": "site"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": true,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_afad4eaeb0da",
+      "type": "line",
+      "renderer": "svg",
+      "title": "How does throughput_mbps change over time for each site?",
+      "question": "SD-WAN health by site: latency, packet loss and throughput",
+      "data": {
+        "datasetId": "ds_805ba0ddcfa2"
+      },
+      "encoding": {
+        "x": {
+          "field": "timestamp"
+        },
+        "y": {
+          "field": "throughput_mbps"
+        },
+        "series": {
+          "field": "site"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": true,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_80c36d2939d5",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "How does latency_ms compare across site?",
+      "question": "SD-WAN health by site: latency, packet loss and throughput",
+      "data": {
+        "datasetId": "ds_805ba0ddcfa2"
+      },
+      "encoding": {
+        "x": {
+          "field": "site"
+        },
+        "y": {
+          "field": "latency_ms",
+          "aggregate": "mean"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_20563c2f36ee",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "How does packet_loss_pct compare across site?",
+      "question": "SD-WAN health by site: latency, packet loss and throughput",
+      "data": {
+        "datasetId": "ds_805ba0ddcfa2"
+      },
+      "encoding": {
+        "x": {
+          "field": "site"
+        },
+        "y": {
+          "field": "packet_loss_pct",
+          "aggregate": "mean"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_9248eddaa341",
+      "type": "scatter",
+      "renderer": "svg",
+      "title": "Is packet_loss_pct related to latency_ms?",
+      "question": "SD-WAN health by site: latency, packet loss and throughput",
+      "data": {
+        "datasetId": "ds_805ba0ddcfa2"
+      },
+      "encoding": {
+        "x": {
+          "field": "latency_ms"
+        },
+        "y": {
+          "field": "packet_loss_pct"
+        },
+        "color": {
+          "field": "site"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "viz_70753e71c4a2",
+  "type": "geo",
+  "renderer": "svg",
+  "title": "How does value vary geographically?",
+  "question": "Choropleth of value by area",
+  "data": {
+    "datasetId": "ds_c054a5bb062d"
+  },
+  "encoding": {
+    "color": {
+      "field": "value"
+    }
+  },
+  "transforms": [],
+  "layout": {
+    "width": 800,
+    "height": 500,
+    "margin": {
+      "top": 56,
+      "right": 24,
+      "bottom": 56,
+      "left": 64
+    },
+    "responsive": true,
+    "pixelRatio": 2
+  },
+  "axes": {},
+  "scales": {},
+  "legend": {
+    "show": true,
+    "position": "right"
+  },
+  "annotations": [],
+  "interaction": {
+    "tooltip": true,
+    "zoom": false,
+    "brush": false,
+    "drag": false,
+    "search": false
+  },
+  "accessibility": {
+    "keyboard": true,
+    "reducedMotion": true
+  },
+  "theme": "light",
+  "options": {
+    "projection": "mercator",
+    "graticule": true
+  }
+}

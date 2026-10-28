@@ -1,0 +1,223 @@
+{
+  "tool": "d3_visualize",
+  "arguments": {
+    "data": {
+      "nodes": [
+        {
+          "id": "internet",
+          "label": "Internet",
+          "type": "internet",
+          "tier": "wan",
+          "site": "WAN",
+          "icon": "internet"
+        },
+        {
+          "id": "fw-1",
+          "label": "FW-1",
+          "type": "firewall",
+          "tier": "edge",
+          "site": "HQ",
+          "icon": "firewall"
+        },
+        {
+          "id": "fw-2",
+          "label": "FW-2",
+          "type": "fw",
+          "tier": "edge",
+          "site": "HQ",
+          "icon": "fw"
+        },
+        {
+          "id": "core-1",
+          "label": "Core-1",
+          "type": "router",
+          "tier": "core",
+          "site": "HQ",
+          "icon": "router"
+        },
+        {
+          "id": "core-2",
+          "label": "Core-2",
+          "type": "router",
+          "tier": "core",
+          "site": "HQ",
+          "icon": "router"
+        },
+        {
+          "id": "dist-1",
+          "label": "Dist-1",
+          "type": "l3-switch",
+          "tier": "distribution",
+          "site": "HQ",
+          "icon": "l3-switch"
+        },
+        {
+          "id": "dist-2",
+          "label": "Dist-2",
+          "type": "l3-switch",
+          "tier": "distribution",
+          "site": "HQ",
+          "icon": "l3-switch"
+        },
+        {
+          "id": "acc-1",
+          "label": "Acc-1",
+          "type": "switch",
+          "tier": "access",
+          "site": "HQ",
+          "icon": "switch"
+        },
+        {
+          "id": "acc-2",
+          "label": "Acc-2",
+          "type": "switch",
+          "tier": "access",
+          "site": "HQ",
+          "icon": "switch"
+        },
+        {
+          "id": "acc-3",
+          "label": "Acc-3",
+          "type": "switch",
+          "tier": "access",
+          "site": "HQ",
+          "icon": "switch"
+        },
+        {
+          "id": "ap-1",
+          "label": "AP-1",
+          "type": "ap",
+          "tier": "endpoint",
+          "site": "HQ",
+          "icon": "ap"
+        },
+        {
+          "id": "srv-1",
+          "label": "App server",
+          "type": "server",
+          "tier": "endpoint",
+          "site": "DC",
+          "icon": "k8s"
+        },
+        {
+          "id": "db-1",
+          "label": "DB",
+          "type": "database",
+          "tier": "endpoint",
+          "site": "DC",
+          "icon": "nic"
+        },
+        {
+          "id": "pc-1",
+          "label": "PC",
+          "type": "pc",
+          "tier": "endpoint",
+          "site": "HQ",
+          "icon": "pc"
+        }
+      ],
+      "links": [
+        {
+          "source": "internet",
+          "target": "fw-1"
+        },
+        {
+          "source": "internet",
+          "target": "fw-2"
+        },
+        {
+          "source": "fw-1",
+          "target": "core-1"
+        },
+        {
+          "source": "fw-2",
+          "target": "core-2"
+        },
+        {
+          "source": "core-1",
+          "target": "core-2",
+          "value": 4
+        },
+        {
+          "source": "core-1",
+          "target": "dist-1"
+        },
+        {
+          "source": "core-2",
+          "target": "dist-2"
+        },
+        {
+          "source": "core-1",
+          "target": "dist-2"
+        },
+        {
+          "source": "core-2",
+          "target": "dist-1"
+        },
+        {
+          "source": "dist-1",
+          "target": "acc-1"
+        },
+        {
+          "source": "dist-1",
+          "target": "acc-2"
+        },
+        {
+          "source": "dist-2",
+          "target": "acc-3"
+        },
+        {
+          "source": "acc-1",
+          "target": "ap-1"
+        },
+        {
+          "source": "acc-2",
+          "target": "pc-1"
+        },
+        {
+          "source": "acc-3",
+          "target": "srv-1"
+        },
+        {
+          "source": "acc-3",
+          "target": "db-1"
+        }
+      ]
+    },
+    "prompt": "Topology using custom icons: a path icon for Kubernetes and an SVG icon for the NIC",
+    "visualization_type": "force",
+    "options": {
+      "encoding": {
+        "color": {
+          "field": "site"
+        }
+      },
+      "options": {
+        "seed": 3,
+        "nodeSizeBy": "constant",
+        "iconStyle": "plain",
+        "icons": {
+          "k8s": {
+            "viewBox": [0, 0, 100, 100],
+            "paths": [
+              {
+                "d": "M50 5L90 27v46L50 95 10 73V27z",
+                "fill": "#326ce5"
+              },
+              {
+                "d": "M50 30a20 20 0 1 0 0 40a20 20 0 1 0 0-40z",
+                "fill": "none",
+                "stroke": "white",
+                "strokeWidth": 8
+              }
+            ]
+          },
+          "nic": {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><circle cx=\"7\" cy=\"12\" r=\"2\"/><g transform=\"translate(1 0)\"><polyline points=\"12 10 15 12 12 14\"/><line x1=\"16\" y1=\"12\" x2=\"19\" y2=\"12\"/></g></svg>"
+          }
+        }
+      }
+    },
+    "output_formats": ["html", "svg", "png"]
+  }
+}

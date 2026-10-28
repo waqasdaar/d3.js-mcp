@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "viz_826d2d749fe3",
+  "type": "force",
+  "renderer": "svg",
+  "title": "How are entities connected and which are central?",
+  "question": "Three-tier network topology with device icons, layered from WAN to endpoints; enable zoom, drag and search",
+  "data": {
+    "datasetId": "ds_435583845e02"
+  },
+  "encoding": {
+    "color": {
+      "field": "tier"
+    }
+  },
+  "transforms": [],
+  "layout": {
+    "width": 800,
+    "height": 600,
+    "margin": {
+      "top": 56,
+      "right": 24,
+      "bottom": 56,
+      "left": 64
+    },
+    "responsive": true,
+    "pixelRatio": 2
+  },
+  "axes": {},
+  "scales": {},
+  "legend": {
+    "show": true,
+    "position": "right"
+  },
+  "annotations": [],
+  "interaction": {
+    "tooltip": true,
+    "zoom": true,
+    "brush": false,
+    "drag": true,
+    "search": true
+  },
+  "accessibility": {
+    "keyboard": true,
+    "reducedMotion": true
+  },
+  "theme": "light",
+  "options": {
+    "linkDistance": 60,
+    "nodeSizeBy": "constant",
+    "tierField": "tier",
+    "tierOrder": ["wan", "edge", "core", "distribution", "access", "endpoint"],
+    "seed": 3
+  }
+}

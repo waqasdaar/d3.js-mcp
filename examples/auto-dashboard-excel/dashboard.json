@@ -1,0 +1,383 @@
+{
+  "title": "Workbook overview",
+  "kpis": [
+    {
+      "label": "Sales · records",
+      "value": "12"
+    },
+    {
+      "label": "Sales · total revenue",
+      "value": "1,084",
+      "detail": "min 40 · max 160"
+    },
+    {
+      "label": "Sales · total units",
+      "value": "389",
+      "detail": "min 12 · max 45"
+    },
+    {
+      "label": "Sales · region values",
+      "value": "4",
+      "detail": "most frequent: North"
+    },
+    {
+      "label": "KPIs · records",
+      "value": "3"
+    },
+    {
+      "label": "KPIs · avg latency_ms",
+      "value": "30.87",
+      "detail": "min 21.5 · max 48"
+    },
+    {
+      "label": "KPIs · avg loss_pct",
+      "value": "0.4667",
+      "detail": "min 0.2 · max 0.9"
+    },
+    {
+      "label": "KPIs · date range",
+      "value": "Oct 1, 2026 – Oct 3, 2026",
+      "detail": "3 timestamps"
+    },
+    {
+      "label": "Totals · records",
+      "value": "2"
+    },
+    {
+      "label": "Totals · total q1",
+      "value": "420",
+      "detail": "min 200 · max 220"
+    },
+    {
+      "label": "Totals · total q2",
+      "value": "290",
+      "detail": "min 130 · max 160"
+    },
+    {
+      "label": "Totals · total",
+      "value": "710",
+      "detail": "min 330 · max 380"
+    }
+  ],
+  "specs": [
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_6daadf5243f5",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "Sales · How does revenue compare across region?",
+      "question": "Workbook overview",
+      "data": {
+        "datasetId": "ds_7b3f28b540be"
+      },
+      "encoding": {
+        "x": {
+          "field": "region"
+        },
+        "y": {
+          "field": "revenue",
+          "aggregate": "sum"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_a880bb454579",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "Sales · How does units compare across region?",
+      "question": "Workbook overview",
+      "data": {
+        "datasetId": "ds_7b3f28b540be"
+      },
+      "encoding": {
+        "x": {
+          "field": "region"
+        },
+        "y": {
+          "field": "units",
+          "aggregate": "sum"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_3af3ec0c0e26",
+      "type": "scatter",
+      "renderer": "svg",
+      "title": "Sales · Is units related to revenue?",
+      "question": "Workbook overview",
+      "data": {
+        "datasetId": "ds_7b3f28b540be"
+      },
+      "encoding": {
+        "x": {
+          "field": "revenue"
+        },
+        "y": {
+          "field": "units"
+        },
+        "color": {
+          "field": "region"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_be654df3de4a",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "KPIs · How does latency_ms compare across site?",
+      "question": "Workbook overview",
+      "data": {
+        "datasetId": "ds_607d1c89b47a"
+      },
+      "encoding": {
+        "x": {
+          "field": "site"
+        },
+        "y": {
+          "field": "latency_ms",
+          "aggregate": "mean"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_4462f42183fe",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "KPIs · How does loss_pct compare across site?",
+      "question": "Workbook overview",
+      "data": {
+        "datasetId": "ds_607d1c89b47a"
+      },
+      "encoding": {
+        "x": {
+          "field": "site"
+        },
+        "y": {
+          "field": "loss_pct",
+          "aggregate": "mean"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_9c074f730d2f",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "Totals · How does q1 compare across region?",
+      "question": "Workbook overview",
+      "data": {
+        "datasetId": "ds_6af9505bb421"
+      },
+      "encoding": {
+        "x": {
+          "field": "region"
+        },
+        "y": {
+          "field": "q1"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    }
+  ]
+}

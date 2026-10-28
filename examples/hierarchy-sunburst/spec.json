@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "id": "viz_6b81e56d71c1",
+  "type": "sunburst",
+  "renderer": "svg",
+  "title": "How is the total divided across levels?",
+  "question": "Sunburst of site capacity by region",
+  "data": {
+    "datasetId": "ds_a34668a9a78f"
+  },
+  "encoding": {},
+  "transforms": [],
+  "layout": {
+    "width": 800,
+    "height": 600,
+    "margin": {
+      "top": 56,
+      "right": 24,
+      "bottom": 56,
+      "left": 64
+    },
+    "responsive": true,
+    "pixelRatio": 2
+  },
+  "axes": {},
+  "scales": {},
+  "legend": {
+    "show": true,
+    "position": "right"
+  },
+  "annotations": [],
+  "interaction": {
+    "tooltip": true,
+    "zoom": false,
+    "brush": false,
+    "drag": false,
+    "search": false
+  },
+  "accessibility": {
+    "keyboard": true,
+    "reducedMotion": true
+  },
+  "theme": "light",
+  "options": {}
+}

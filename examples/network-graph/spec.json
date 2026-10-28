@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "viz_db26db3c3be4",
+  "type": "force",
+  "renderer": "svg",
+  "title": "How are entities connected and which are central?",
+  "question": "Force-directed network colored by group, sized by degree, with search, zoom and drag",
+  "data": {
+    "datasetId": "ds_0d98bfc2b5b2"
+  },
+  "encoding": {
+    "color": {
+      "field": "group"
+    }
+  },
+  "transforms": [],
+  "layout": {
+    "width": 800,
+    "height": 600,
+    "margin": {
+      "top": 56,
+      "right": 24,
+      "bottom": 56,
+      "left": 64
+    },
+    "responsive": true,
+    "pixelRatio": 2
+  },
+  "axes": {},
+  "scales": {},
+  "legend": {
+    "show": true,
+    "position": "right"
+  },
+  "annotations": [],
+  "interaction": {
+    "tooltip": true,
+    "zoom": true,
+    "brush": false,
+    "drag": true,
+    "search": true
+  },
+  "accessibility": {
+    "keyboard": true,
+    "reducedMotion": true
+  },
+  "theme": "light",
+  "options": {
+    "nodeSizeBy": "degree",
+    "showLabels": true,
+    "seed": 7
+  }
+}

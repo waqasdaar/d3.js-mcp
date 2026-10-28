@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Alpha", "value": 10 },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-10, 40],
+            [-5, 40],
+            [-5, 45],
+            [-10, 45],
+            [-10, 40]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bravo", "value": 25 },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-5, 40],
+            [0, 40],
+            [0, 45],
+            [-5, 45],
+            [-5, 40]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Charlie", "value": 40 },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, 40],
+            [5, 40],
+            [5, 45],
+            [0, 45],
+            [0, 40]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Delta", "value": 55 },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-10, 45],
+            [-5, 45],
+            [-5, 50],
+            [-10, 50],
+            [-10, 45]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Echo", "value": 70 },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-5, 45],
+            [0, 45],
+            [0, 50],
+            [-5, 50],
+            [-5, 45]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Foxtrot", "value": 85 },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [0, 45],
+            [5, 45],
+            [5, 50],
+            [0, 50],
+            [0, 45]
+          ]
+        ]
+      }
+    }
+  ]
+}

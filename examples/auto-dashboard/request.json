@@ -1,0 +1,12 @@
+{
+  "tool": "d3_create_dashboard",
+  "arguments": {
+    "data": {
+      "file": "telemetry.csv"
+    },
+    "prompt": "SD-WAN health by site: latency, packet loss and throughput"
+  },
+  "env": {
+    "D3MCP_DATA_DIRS": "<project>/examples/data-files"
+  }
+}

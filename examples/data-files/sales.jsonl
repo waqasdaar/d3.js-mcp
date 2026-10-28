@@ -1,0 +1,12 @@
+{"region":"North","product":"Router","quarter":"Q1","revenue":120,"units":30}
+{"region":"North","product":"Switch","quarter":"Q1","revenue":80,"units":44}
+{"region":"South","product":"Router","quarter":"Q1","revenue":95,"units":25}
+{"region":"South","product":"Switch","quarter":"Q1","revenue":60,"units":31}
+{"region":"East","product":"Router","quarter":"Q1","revenue":150,"units":41}
+{"region":"East","product":"Switch","quarter":"Q1","revenue":70,"units":35}
+{"region":"West","product":"Router","quarter":"Q1","revenue":40,"units":12}
+{"region":"West","product":"Switch","quarter":"Q1","revenue":55,"units":29}
+{"region":"North","product":"Router","quarter":"Q2","revenue":130,"units":33}
+{"region":"South","product":"Switch","quarter":"Q2","revenue":66,"units":34}
+{"region":"East","product":"Router","quarter":"Q2","revenue":160,"units":45}
+{"region":"West","product":"Switch","quarter":"Q2","revenue":58,"units":30}

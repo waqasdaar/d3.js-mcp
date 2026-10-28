@@ -1,0 +1,430 @@
+{
+  "title": "One dashboard, every input format",
+  "kpis": [],
+  "specs": [
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_7cd40d865627",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "Excel (.xlsx) · Totals sheet",
+      "question": "How does q1 compare across region?",
+      "data": {
+        "datasetId": "ds_dfccb323db5c"
+      },
+      "encoding": {
+        "x": {
+          "field": "region"
+        },
+        "y": {
+          "field": "total"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_e05a2dca9452",
+      "type": "line",
+      "renderer": "svg",
+      "title": "Excel (.xlsx) · KPIs sheet (dates)",
+      "question": "How does latency_ms change over time for each site?",
+      "data": {
+        "datasetId": "ds_ca899b69c2e7"
+      },
+      "encoding": {
+        "x": {
+          "field": "date"
+        },
+        "y": {
+          "field": "latency_ms"
+        },
+        "series": {
+          "field": "site"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {
+        "showPoints": true
+      }
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_a4d850f56a89",
+      "type": "grouped-bar",
+      "renderer": "svg",
+      "title": "OpenDocument (.ods)",
+      "question": "How does revenue compare across region and product?",
+      "data": {
+        "datasetId": "ds_34a5ba9703ef"
+      },
+      "encoding": {
+        "x": {
+          "field": "region"
+        },
+        "y": {
+          "field": "revenue"
+        },
+        "series": {
+          "field": "product"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_76bde3c6a7d4",
+      "type": "donut",
+      "renderer": "svg",
+      "title": "YAML",
+      "question": "What share of total revenue does each region have?",
+      "data": {
+        "datasetId": "ds_008b5fc3a6aa"
+      },
+      "encoding": {
+        "color": {
+          "field": "product"
+        },
+        "value": {
+          "field": "units"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_b12509ddaed3",
+      "type": "scatter",
+      "renderer": "svg",
+      "title": "JSON Lines",
+      "question": "Is units related to revenue?",
+      "data": {
+        "datasetId": "ds_5f20ee8686da"
+      },
+      "encoding": {
+        "x": {
+          "field": "units"
+        },
+        "y": {
+          "field": "revenue"
+        },
+        "color": {
+          "field": "region"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_f6b88d4ba718",
+      "type": "bar",
+      "renderer": "svg",
+      "title": "CSV with ; and decimal commas",
+      "question": "How does revenue_eur compare across region?",
+      "data": {
+        "datasetId": "ds_b962898fda13"
+      },
+      "encoding": {
+        "x": {
+          "field": "region"
+        },
+        "y": {
+          "field": "revenue_eur"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_5532f7869d1a",
+      "type": "geo",
+      "renderer": "svg",
+      "title": "TopoJSON",
+      "question": "How does value vary geographically?",
+      "data": {
+        "datasetId": "ds_afe31d9302eb"
+      },
+      "encoding": {
+        "color": {
+          "field": "value"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {}
+    },
+    {
+      "schemaVersion": "1.0",
+      "id": "viz_99040423e6da",
+      "type": "force",
+      "renderer": "svg",
+      "title": "YAML graph with icons",
+      "question": "How are entities connected and which are central?",
+      "data": {
+        "datasetId": "ds_63aaaf8b7d81"
+      },
+      "encoding": {
+        "color": {
+          "field": "tier"
+        }
+      },
+      "transforms": [],
+      "layout": {
+        "width": 560,
+        "height": 340,
+        "margin": {
+          "top": 56,
+          "right": 24,
+          "bottom": 56,
+          "left": 64
+        },
+        "responsive": true,
+        "pixelRatio": 2
+      },
+      "axes": {},
+      "scales": {},
+      "legend": {
+        "show": true,
+        "position": "right"
+      },
+      "annotations": [],
+      "interaction": {
+        "tooltip": true,
+        "zoom": false,
+        "brush": false,
+        "drag": false,
+        "search": false
+      },
+      "accessibility": {
+        "keyboard": true,
+        "reducedMotion": true
+      },
+      "theme": "light",
+      "options": {
+        "nodeSizeBy": "constant",
+        "seed": 3
+      }
+    }
+  ]
+}
