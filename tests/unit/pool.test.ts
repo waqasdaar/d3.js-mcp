@@ -104,7 +104,8 @@ describe("RenderPool", () => {
   });
 
   it("terminates a render that exceeds the timeout and recovers", async () => {
-    const pool = new RenderPool(1, 1_000, "error");
+    // The recovery render cold-starts a tsx worker, which can take >1 s on CI runners.
+    const pool = new RenderPool(1, 3_000, "error");
     const g = ingest(bigGraph(3000), config);
     const slow = parseSpec({
       id: "pool_slow",
@@ -115,7 +116,7 @@ describe("RenderPool", () => {
     try {
       const err = await pool.render(slow, g, DEFAULT_RENDER_LIMITS).catch((e: unknown) => e);
       expect((err as D3McpError).code).toBe("LIMIT_EXCEEDED");
-      expect((err as D3McpError).message).toMatch(/exceeded 1000 ms/);
+      expect((err as D3McpError).message).toMatch(/exceeded 3000 ms/);
       expect((await pool.render(barSpec, bars, DEFAULT_RENDER_LIMITS)).out.markCount).toBe(5);
     } finally {
       await pool.close();
